@@ -1,3 +1,93 @@
-<header class="page-header">
-  <div class="container">Header</div>
+<header class="header">
+  <div class="header__container container">
+   
+    <a class="header_logo-link">
+      <img 
+        class="header_logo"
+        srcset=""
+        src=""
+        alt="logo"
+      />
+    </a>
+
+    <button class="mob-menu__open-btn" type="button">
+      <svg class="mob-menu__btn-icon-open" width="20" height="12">
+        <use href=""></use>
+      </svg>
+    </button>
+
+    <nav class="header__nav">
+      <ul>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="">About us</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="">How it's made?</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="">Our products</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header__buy-btn" type="button">
+      <span class="header__buy-text">Buy now</span>
+      <svg class="header__buy-icon" width="5" height="8">
+        <use href=""></use>
+      </svg>
+    </button>
+
+  </div>
+
+
+  <div class="backdrop-mob is-hidden">
+    <div class="mob-menu">
+      <div class="mob-menu__wrapper">
+        <h2 class="visually-hidden">Mobile menu</h2>
+        
+        <button class="mob-menu__close-btn" type="button">
+          <svg class="mob-menu__close-icon" width="40" height="40">
+            <use href=""></use>
+          </svg>
+        </button>
+
+        <button class="mob-menu__buy-btn">
+          <span class="mob-menu__buy-text">Buy now</span>
+          <span>
+            <svg class="mob-menu__buy-icon" width="5" height="8">
+              <use href=""></use>
+            </svg>
+          </span>
+        </button>
+
+        <ul class="mob-menu__list list">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="">Home</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="">About us</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="">How it's made?</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="">Our products</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="">Contacts</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
 </header>

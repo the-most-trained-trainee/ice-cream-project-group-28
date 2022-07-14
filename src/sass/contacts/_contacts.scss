@@ -1,3 +1,115 @@
 .contacts {
-    background-color: bisque;
+  background-image: linear-gradient(
+    to top,
+    #FFF5F6 75%,
+    #fff
+  );
+  &__title {
+    display: none;
+  }
+  &__card {
+    min-width: 280px;
+    min-height: 412px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__modal_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+  }
+  &__modal_btn>li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 44px;
+    color: $accent-color;
+    background-color: $primary-inverse-text-color;
+    border: 0;
+    border-radius: 22px;
+    &:hover,
+    &:focus {
+      color: $primary-inverse-text-color;
+      background-color: $accent-color;
+    }
+  }
+  &__button--color {
+    color: $primary-inverse-text-color;
+    background-color: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $primary-inverse-text-color;
+    }
+  }
+}
+.card {
+  padding: 40px 32px;
+  &__location {
+    margin-bottom: 8px;
+  }
+  &__type {
+    display: flex;
+    padding: 0 24px;
+    background-color: #F0D1A5;
+    height: 16px;
+    width: max-content;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.8;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: $primary-inverse-text-color;
+  }
+  &__content {
+    margin-top: 24px;
+    &:not(:last-child)::after {
+      display: block;
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: #E1E1E1;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: $secondary-text-color;
+  }
+  &__weekdays {
+    margin-bottom: 8px;
+  }
+  &__days {
+    font-size: 12px;
+    line-height: 1.8;
+    color: $primary-text-color;
+  }
+  &__time {
+    font-size: 12px;
+    line-height: 1.8;
+    color: $secondary-title-color;
+  }
+  &__weekends {
+    margin-bottom: 24px;
+  }
+  &__link {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: $secondary-text-color;
+  }
+
 }

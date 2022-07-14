@@ -1,3 +1,48 @@
 .about {
-    background-color: aqua;
+    background-color: #FFF5F6;
+  
 }
+.label {
+    font-family: 'Titan One';
+    text-align: center;
+    margin-bottom: 32px;
+}
+.title-label {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFA5BA;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+.title-about {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.04em; 
+    color: #D41443;
+    text-transform: uppercase;
+}
+.description {
+    background-image: url(/src/img/background-about.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.description-first{
+    color: #000000; 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-right: 80px;
+}
+.description-two {
+    color: #907E82;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%;  
+    padding-right: 80px;
+}   

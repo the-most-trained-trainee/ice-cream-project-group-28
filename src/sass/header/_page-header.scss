@@ -1,3 +1,118 @@
 .page-header {
     background-color: rgba(165, 42, 42, 0.5);
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    padding-top: 8px;
+    
+    z-index: 10;
 }
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-link {
+    display: block;
+}
+
+.header__btn {
+    height: 20px;
+    text-align: center;
+
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+/*----MOBILE MENU----*/
+
+.backdrop-mob {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vw;
+    
+    background-color: ;
+    
+    z-index: 11;
+}
+
+.mob-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    height: 100vw;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    z-index: 12;
+
+}
+
+
+.mob-menu__wrapper {
+    width: 100%;
+
+    margin: 0 auto;
+
+    @media screen and (min-width: 320px) {
+        width: 320px;
+    }
+}
+
+
+.mob-menu__close-btn {
+    display: block;
+
+    background-color: transparent;
+    border: none;
+    
+    padding-right: 20px;
+    margin-left: auto;
+
+}
+
+.mob-menu__close-icon {
+    fill: ;
+}
+
+.mob-menu__close-icon:hover {
+    background-color: #fff;
+    border-radius: 50%;
+    fill: ;
+}
+
+.mob-menu__buy-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.mob-menu__buy-btn {
+    
+}
+
+.mob-menu__list {
+
+}
+
+.mob-menu__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: ;
+
+}
+

@@ -1,8 +1,8 @@
 .contacts {
   background-image: linear-gradient(
     to top,
-    #FFF5F6 75%,
-    #fff
+    #FFF5F6 77%,
+    #fff 23%
   );
   &__title {
     display: none;
@@ -10,6 +10,7 @@
   &__card {
     min-width: 280px;
     min-height: 412px;
+    background-color: #fff;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     &:not(:last-child) {

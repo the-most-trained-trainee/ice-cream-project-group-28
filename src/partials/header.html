@@ -10,7 +10,13 @@
       />
     </a>
 
-    <nav>
+    <button class="mob-menu__open-btn" type="button">
+      <svg class="mob-menu__btn-icon-open" width="20" height="12">
+        <use href=""></use>
+      </svg>
+    </button>
+
+    <nav class="header__nav">
       <ul>
         <li class="header__nav-item">
           <a class="header__nav-link" href="">Home</a>
@@ -30,19 +36,12 @@
       </ul>
     </nav>
 
-    <button class="header__btn menu__open-btn" type="button">
-      <svg class="header__btn-icon-open" width="">
-        <use href=""></use>
-      </svg>
-    </button>
-
-    <button class="header__buy-btn" tupe="button">
+    <button class="header__buy-btn" type="button">
       <span class="header__buy-text">Buy now</span>
-      <svg class="header__buy-icon" width="">
+      <svg class="header__buy-icon" width="5" height="8">
         <use href=""></use>
       </svg>
     </button>
-
 
   </div>
 
@@ -53,14 +52,15 @@
         <h2 class="visually-hidden">Mobile menu</h2>
         
         <button class="mob-menu__close-btn" type="button">
-          <svg class="mob-menu__close-icon" width="">
+          <svg class="mob-menu__close-icon" width="40" height="40">
             <use href=""></use>
           </svg>
         </button>
 
         <button class="mob-menu__buy-btn">
-          Buy now<span>
-            <svg class="mob-menu__buy-icon">
+          <span class="mob-menu__buy-text">Buy now</span>
+          <span>
+            <svg class="mob-menu__buy-icon" width="5" height="8">
               <use href=""></use>
             </svg>
           </span>

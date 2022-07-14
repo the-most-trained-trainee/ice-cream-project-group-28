@@ -12,7 +12,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #FFA5BA;
+    color: $secondary-title-color;
     padding-bottom: 15px;
     text-transform: uppercase;
 }
@@ -22,7 +22,7 @@
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.04em; 
-    color: #D41443;
+    color: $accent-color;
     text-transform: uppercase;
 }
 .description {
@@ -31,7 +31,7 @@
     background-position: center;
 }
 .description-first{
-    color: #000000; 
+    color: $primary-text-color; 
     font-weight: 500;
     font-size: 12px;
     line-height: 162%;
@@ -40,7 +40,7 @@
     padding-right: 80px;
 }
 .description-two {
-    color: #907E82;
+    color: $secondary-text-color;
     font-weight: 500;
     font-size: 12px;
     line-height: 162%;  

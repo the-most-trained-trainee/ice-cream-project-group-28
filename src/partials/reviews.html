@@ -1,3 +1,54 @@
-<section class="section reviews">
-  <div class="container">Reviews</div>
-</section>
+<article class="reviews">
+         <div class="container">
+          <h1 class="visually-hidden">Reviews</h1>
+          
+  <div class="swiper customerreviews">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <span class="swiper-slide__avatar"></span>
+          <div class="swiper-slide__content">
+            <div class="swiper-slide__thumb">
+               <p class="swiper-slide__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+            </div>
+           
+          </div>
+
+          <div class="swiper-slide__subtitle">
+             <p>Emily, Los Angeles</p>
+          </div>
+         
+          
+         </div>
+        <div class="swiper-slide">
+          <span class="swiper-slide__avatar"></span>
+          <div class="swiper-slide__content">
+            <div class="swiper-slide__thumb">
+               <p class="swiper-slide__text">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
+            </div>
+           
+          </div>
+
+          <div class="swiper-slide__subtitle">
+             <p>Emily, Los Angeles</p>
+          </div>
+        </div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+ </div>
+
+   <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".customerreviews", {
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+      </article>

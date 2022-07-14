@@ -1,3 +1,118 @@
 .reviews {
-    background-color: darkseagreen;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.swiper {
+    width: 100%;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+}
+
+.swiper-pagination-bullet-active {
+    
+    // background-image: url(../image/home.svg);
+    display: inline-flex;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+
+}
+
+.swiper-slide__avatar {
+    // background-image: url(../image/reviews/first.png);
+
+    height: 85px;
+    width: 85px;
+    margin-bottom: 32px;
+    // background-color: aqua;
+
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
+}
+
+.swiper-slide__content {
+    position: relative;
+    background: #FAFAFA;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 43px;
+    padding-bottom: 17px;
+
+    margin-bottom: 32px;
+    
+
+
+}
+
+.slider__text::after {
+    content: ' ';
+    color: #E1E1E1;
+    font-size: 120px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    
+}
+
+
+
+.swiper-slide__text {
+    flex-basis: 87%;
+    text-indent: 54px;
+
+    font-size: 12px;
+    line-height: 2.58;
+    text-align: center;
+
+
+}
+
+.swiper-slide__thumb {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    background-image: repeating-linear-gradient(to bottom,
+            transparent 0 30px,
+            #E1E1E1 30px 31px);
+
+    // border-bottom: 1px solid #E1E1E1;
+}
+
+.swiper-slide__subtitle {
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 186%;
+    /* or 26px */
+
+    text-align: center;
+
+    color: #000000;
+
+    margin-bottom: 28px;
 }

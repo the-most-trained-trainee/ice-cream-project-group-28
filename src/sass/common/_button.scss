@@ -1,0 +1,19 @@
+.button {
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+    border-radius: 22px;
+
+    transition: background-color $default-transition-time $default-transition-function;
+
+
+    &--with-hover {
+
+        &:hover,
+        &:focus {
+            background-color: $default-button-hover-bg-color;
+        }
+    }
+
+
+}

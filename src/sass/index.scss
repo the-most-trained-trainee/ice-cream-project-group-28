@@ -1,2 +1,22 @@
-@import './common';
-@import './example';
+// Modern Nomalize
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+// Utils
+@import 'utils/index';
+
+// Base
+@import 'base';
+
+// Common
+@import 'common/index';
+
+// Sections
+@import 'header/index';
+@import 'hero/index';
+@import 'products/index';
+@import 'about/index';
+@import 'features/index';
+@import 'gallery/index';
+@import 'reviews/index';
+@import 'contacts/index';
+@import 'footer/index';

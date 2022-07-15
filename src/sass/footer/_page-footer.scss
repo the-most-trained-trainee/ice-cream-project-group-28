@@ -5,15 +5,31 @@
 
 .page-footer__container {
     padding-bottom: 40px;
+
+
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 60px;
+    }
+
 }
 
 
 .page-footer__label {
-    margin-bottom: 40px;
+
 
     font-family: 'Titan One', cursive;
     font-weight: 400;
     text-transform: uppercase;
+
+    @media screen and (max-width: $mobile-max) {
+        margin-bottom: 40px;
+    }
 
 }
 
@@ -29,6 +45,11 @@
 
     @media screen and (max-width: $mobile-max) {
         width: 230px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+        width: 340px;
+        margin-bottom: 12px;
     }
 
     @media screen and (min-width: $tablet) {

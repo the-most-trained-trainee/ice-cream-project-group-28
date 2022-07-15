@@ -1,3 +1,69 @@
 .features {
-    background-color: teal;
+  background-color: $secondary-background-color;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 50px;
+      margin-bottom: 16px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--cup::before {
+      width: 33px;
+      // background-image: url('../images/Advantages/Mobile/advan-cup-mob-x1.png');
+      background-image: url('../images/advantages/mobile/advan-cup-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        // background-image: url('../images/Advantages/Mobile/advan-cup-mob-x2.png');
+        background-image: url('../images/advantages/mobile/advan-cup-mob-x2.png');
+      }
+    }
+
+    &--apple::before {
+      width: 50px;
+      // background-image: url('../images/Advantages/Mobile/advan-apples-mob-x1.png');
+      background-image: url('../images/advantages/mobile/advan-apples-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        // background-image: url('../images/Advantages/Mobile/advan-apples-mob-x2.png');
+        background-image: url('../images/advantages/mobile/advan-apples-mob-x2.png');
+      }
+    }
+
+    &--heart::before {
+      width: 44px;
+      // background-image: url('../images/Advantages/Mobile/advan-heart-mob-x1.png');
+      background-image: url('../images/advantages/mobile/advan-heart-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        // background-image: url('../images/Advantages/Mobile/advan-heart-mob-x2.png');
+        background-image: url('../images/advantages/mobile/advan-heart-mob-x2.png');
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 19px;
+    font-family: 'Titan One', cursive;
+    font-size: 36px;
+    line-height: calc(41 / 36);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+  }
+
+  &__descr {
+    max-width: 230px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(20 / 12);
+  }
 }

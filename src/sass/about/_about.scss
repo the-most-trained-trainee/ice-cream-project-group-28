@@ -1,3 +1,44 @@
 .about {
-    background-color: aqua;
+    background-color: $secondary-background-color;
+  
 }
+.about__label {
+    font-family: 'Titan One', 'cursive';
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+.about__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $secondary-title-color;
+    padding-bottom: 15px;
+}
+.about__subtitle {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 0.04em; 
+    color: $accent-color;
+}
+.about__description {
+    background-image: url(../images/about/mobile/about-bgmilk-mob-x1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 162%; 
+    
+}
+.about__text{
+    color: $primary-text-color; 
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-right: 80px;
+}
+.about__text--light {
+    color: $secondary-text-color;
+    padding-right: 80px;
+}   

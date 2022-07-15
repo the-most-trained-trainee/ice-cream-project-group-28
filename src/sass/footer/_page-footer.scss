@@ -1,9 +1,101 @@
 .page-footer {
-    background-color: chocolate;
+    // padding-bottom: 3px;
+    background-color: $secondary-background-color;
 }
 
-.page-footer__button {
-    width: 100px;
-    height: 40px;
-    background-color: wheat;
+.page-footer__container {
+    padding-bottom: 40px;
+}
+
+
+.page-footer__label {
+
+    margin-bottom: 40px;
+
+    font-family: 'Titan One', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.page-footer__title-begin {
+    display: block;
+    width: 230px;
+    margin-left: 2px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.167;
+    color: $secondary-title-color;
+}
+
+.page-footer__title-end {
+    display: block;
+    width: 200px;
+
+    font-size: 34px;
+    line-height: 1, 147;
+    letter-spacing: 0.04em;
+    color: $accent-color;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.socials__item {
+    @include set-items-margin (right, 30px);
+}
+
+.socials__link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    background-color: #FEA5BB;
+    @extend %flex-center;
+
+}
+
+.page-footer__icon {
+    fill: $primary-background-color;
+}
+
+.address {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.address__appeal {
+    margin-right: 4px;
+    color: $primary-text-color;
+}
+
+.address__tel {
+    color: $accent-color;
+}
+
+.sub-footer {
+    padding-top: 16px;
+    padding-bottom: 3px;
+    border-top: 1px solid #E1E1E1;
+}
+
+.page-footer__copyright {
+    max-width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-weight: 700;
+    line-height: 1.52;
+
+    color: $secondary-text-color;
 }

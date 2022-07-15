@@ -44,6 +44,10 @@
     color: $accent-color;
     background-color: $primary-inverse-text-color;
   }
+  &__icon {
+    fill: currentColor;
+    margin-left: 8px;
+  }
 }
 .card {
   padding: 40px 32px;

@@ -25,8 +25,8 @@
 }
 
 .swiper-pagination-bullet-active {
-    
-    // background-image: url(../image/home.svg);
+    background-color: transparent;
+    background-image: url(../images/cust-home.svg);
     display: inline-flex;
     height: 12px;
     width: 12px;
@@ -39,16 +39,16 @@
 }
 
 .swiper-slide__avatar {
-    // background-image: url(../image/reviews/first.png);
+    background-image: url(../images/customer-reviews/mobile/cust-emily-mob-x1.png);
 
     height: 85px;
     width: 85px;
     margin-bottom: 32px;
-    // background-color: aqua;
+   
 
-    // background-size: contain;
-    // background-position: center;
-    // background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .swiper-slide__content {
@@ -66,7 +66,7 @@
     position: relative;
 }
 
-.swiper-slide__content::before {
+.swiper-slide__content::after {
 
     content: '\22EF';
     position: absolute;
@@ -80,21 +80,25 @@
 }
 
 
-// .swiper-slide__text::after {
-//     content: '\201F';
-//     color: #E1E1E1;
-//     font-size: 120px;
-//     position: absolute;
-//     top: 20px;
-//     left: 50px;
+.swiper-slide__content::before {
+    content: ' ';
+    position: absolute;
+    top: 30px;
+    left: 53px;
+    z-index: 1;
+    background-image: url(../images/customer-reviews/mobile/cust-quotes-mob-x1.png);
+    width:54px;
+    height:40px;
+
     
-// }
+}
 
 
 
 .swiper-slide__text {
     flex-basis: 87%;
-    text-indent: 54px;
+    
+    z-index: 2;
 
     font-size: 12px;
     line-height: 2.58;
@@ -117,7 +121,6 @@
 
 .swiper-slide__subtitle {
 
-    
     line-height: 1.86;
     text-align: center;
     margin-bottom: 28px;

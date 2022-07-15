@@ -2,47 +2,43 @@
     background-color: #FFF5F6;
   
 }
-.label {
-    font-family: 'Titan One';
+.about__label {
+    font-family: 'Titan One', 'cursive';
     text-align: center;
     margin-bottom: 32px;
+    text-transform: uppercase;
 }
-.title-label {
-    font-family: 'Titan One';
+.about__title {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
     color: $secondary-title-color;
     padding-bottom: 15px;
-    text-transform: uppercase;
 }
-.title-about {
+.about__subtitle {
     font-weight: 400;
     font-size: 34px;
     line-height: 39px;
     text-align: center;
     letter-spacing: 0.04em; 
     color: $accent-color;
-    text-transform: uppercase;
 }
-.description {
-    background-image: url(/src/img/background-about.png);
+.about__description {
+    // background-image: url(/);
     background-repeat: no-repeat;
     background-position: center;
-}
-.description-first{
-    color: $primary-text-color; 
     font-weight: 500;
     font-size: 12px;
-    line-height: 162%;
+    line-height: 162%; 
+    
+}
+.description__text{
+    color: $primary-text-color; 
     padding-bottom: 40px;
     padding-top: 40px;
     padding-right: 80px;
 }
-.description-two {
+.description__text--light {
     color: $secondary-text-color;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 162%;  
     padding-right: 80px;
 }   

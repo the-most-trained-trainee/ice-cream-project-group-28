@@ -1,5 +1,7 @@
 .header {
+
     background-color: rgba(255,184,202,0.8);
+
 
     box-sizing: border-box;
     position: absolute;
@@ -9,7 +11,8 @@
     padding-top: 8px;
 
     position: fixed;
-    z-index: 10; 
+    z-index: 10;
+
 }
 
 .header__container {
@@ -17,6 +20,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 .header__logo-link {
     display: block;
@@ -48,6 +52,17 @@
    }
 }
 
+.header__buy-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: $accent-color;
+}
+
+.header__buy-icon {
+    fill: $accent-color;
+    margin-left: 16px;
+}
+
 
 
 
@@ -63,7 +78,9 @@
     border: 0;
     cursor: pointer;
 
-    background-color: rgba(255,184,202,0.8);
+
+    background-color: transparent;
+
 }
 
 .mob-menu__btn-icon-open {
@@ -168,10 +185,13 @@
 }
 
 .mob-menu__buy-text {
-    color: #D41443;
+    font-size: 16px;
+    font-weight: 700;
+    color: $accent-color;
 }
 
 .mob-menu__buy-icon {
+    fill: $accent-color;
     margin-left: 16px;
 }
 

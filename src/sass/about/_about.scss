@@ -1,5 +1,5 @@
 .about {
-    background-color: #FFF5F6;
+    background-color: $secondary-background-color;
   
 }
 .about__label {
@@ -32,13 +32,13 @@
     line-height: 162%; 
     
 }
-.description__text{
+.about__text{
     color: $primary-text-color; 
     padding-bottom: 40px;
     padding-top: 40px;
     padding-right: 80px;
 }
-.description__text--light {
+.about__text--light {
     color: $secondary-text-color;
     padding-right: 80px;
 }   

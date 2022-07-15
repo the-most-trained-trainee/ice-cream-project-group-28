@@ -78,13 +78,11 @@
     border: 0;
     cursor: pointer;
 
-
     background-color: transparent;
-
 }
 
 .mob-menu__btn-icon-open {
-    fill: #D41443;
+    fill: $accent-color;
 }
 
 
@@ -153,17 +151,13 @@
 }
 
 .mob-menu__close-icon {
-
-    fill: #D41443;
-    margin-top: 20px;
-    margin-right: 20px;
-
+    fill: $accent-color;
 }
 
 .mob-menu__close-icon:hover {
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 50%;
-    fill: #D41443;
+    fill: $accent-color;
 }
 
 .mob-menu__buy-btn {

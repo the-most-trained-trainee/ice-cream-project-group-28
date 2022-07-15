@@ -9,7 +9,6 @@
 
 
 .page-footer__label {
-
     margin-bottom: 40px;
 
     font-family: 'Titan One', cursive;
@@ -20,22 +19,57 @@
 
 .page-footer__title-begin {
     display: block;
-    width: 230px;
-    margin-left: 2px;
+
+
     margin-bottom: 16px;
+
     font-size: 18px;
     line-height: 1.167;
     color: $secondary-title-color;
+
+    @media screen and (max-width: $mobile-max) {
+        width: 230px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 26px;
+        line-height: 1.154;
+        letter-spacing: 0.04em;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 30px;
+        line-height: 1.133;
+    }
 }
 
 .page-footer__title-end {
     display: block;
-    width: 200px;
+
 
     font-size: 34px;
     line-height: 1, 147;
     letter-spacing: 0.04em;
     color: $accent-color;
+
+    @media screen and (max-width: $mobile-max) {
+        width: 200px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+        width: 340px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px;
+        line-height: 1.146;
+        letter-spacing: 0.06em;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 58px;
+        line-height: 1.138;
+    }
 }
 
 
@@ -47,6 +81,8 @@
     padding-top: 16px;
     padding-bottom: 3px;
     border-top: 1px solid #E1E1E1;
+
+
 }
 
 .page-footer__copyright {
@@ -58,4 +94,10 @@
     line-height: 1.52;
 
     color: $secondary-text-color;
+
+    @media screen and (min-width: $tablet) {
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+    }
+
 }

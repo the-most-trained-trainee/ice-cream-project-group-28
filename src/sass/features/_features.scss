@@ -1,25 +1,46 @@
 .features {
   background-color: $tetriary-background-color;
 
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
 
-  &__icon {
-    display: block;
-    height: 50px;
-    margin-bottom: 16px;
-    background-color: red;
-    &--first {
+    &::before {
+      content: '';
+      display: block;
+      height: 50px;
+      margin-bottom: 16px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--cup::before {
       width: 33px;
+      background-image: url('../images/Advantages/Mobile/advan-cup-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Advantages/Mobile/advan-cup-mob-x2.png');
+      }
     }
 
-    &--second {
+    &--apple::before {
       width: 50px;
+      background-image: url('../images/Advantages/Mobile/advan-apples-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Advantages/Mobile/advan-apples-mob-x2.png');
+      }
     }
 
-    &--third {
+    &--heart::before {
       width: 44px;
+      background-image: url('../images/Advantages/Mobile/advan-heart-mob-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/Advantages/Mobile/advan-heart-mob-x2.png');
+      }
     }
   }
 

@@ -1,0 +1,27 @@
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.socials__item {
+    @include set-items-margin (right, 30px);
+}
+
+.socials__link {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    background-color: #FEA5BB;
+    @extend %flex-center;
+
+    transition: background-color $default-transition-time $default-transition-function;
+
+    &:hover {
+        background-color: $accent-color;
+    }
+
+}

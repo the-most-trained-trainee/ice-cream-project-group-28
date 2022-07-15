@@ -1,0 +1,18 @@
+.address {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.address__appeal {
+    margin-right: 4px;
+    color: $primary-text-color;
+}
+
+.address__tel {
+    color: $accent-color;
+}

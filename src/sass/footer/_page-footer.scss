@@ -38,49 +38,9 @@
     color: $accent-color;
 }
 
-.socials {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    margin-bottom: 40px;
-}
-
-.socials__item {
-    @include set-items-margin (right, 30px);
-}
-
-.socials__link {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-
-    background-color: #FEA5BB;
-    @extend %flex-center;
-
-}
 
 .page-footer__icon {
     fill: $primary-background-color;
-}
-
-.address {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 1.86;
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-.address__appeal {
-    margin-right: 4px;
-    color: $primary-text-color;
-}
-
-.address__tel {
-    color: $accent-color;
 }
 
 .sub-footer {

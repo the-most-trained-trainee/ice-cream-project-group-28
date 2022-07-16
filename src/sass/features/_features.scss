@@ -2,68 +2,189 @@
   background-color: $secondary-background-color;
 
   &__item {
+    &::before {
+      content: '';
+      display: block;
+      height: 50px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-family: 'Titan One', cursive;
+    letter-spacing: 0.04em;
+    color: $accent-color;
+  }
+
+  &__descr {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: $mobile-max) {
+  .features {
+    padding-top: 20px;
+
+    &__title {
+      margin-bottom: 19px;
+      font-size: 36px;
+      line-height: calc(41 / 36);
+      text-transform: uppercase;
+    }
+
+    &__descr {
+      max-width: 230px;
+      font-size: 12px;
+      line-height: calc(20 / 12);
+    }
+  }
+
+  .features__item {
     &:not(:last-child) {
       margin-bottom: 28px;
     }
 
     &::before {
-      content: '';
-      display: block;
-      height: 50px;
       margin-bottom: 16px;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     &--cup::before {
       width: 33px;
-      // background-image: url('../images/Advantages/Mobile/advan-cup-mob-x1.png');
       background-image: url('../images/advantages/mobile/advan-cup-mob-x1.png');
 
       @media screen and (min-resolution: 2dppx) {
-        // background-image: url('../images/Advantages/Mobile/advan-cup-mob-x2.png');
         background-image: url('../images/advantages/mobile/advan-cup-mob-x2.png');
       }
     }
 
     &--apple::before {
       width: 50px;
-      // background-image: url('../images/Advantages/Mobile/advan-apples-mob-x1.png');
       background-image: url('../images/advantages/mobile/advan-apples-mob-x1.png');
 
       @media screen and (min-resolution: 2dppx) {
-        // background-image: url('../images/Advantages/Mobile/advan-apples-mob-x2.png');
         background-image: url('../images/advantages/mobile/advan-apples-mob-x2.png');
       }
     }
 
     &--heart::before {
       width: 44px;
-      // background-image: url('../images/Advantages/Mobile/advan-heart-mob-x1.png');
       background-image: url('../images/advantages/mobile/advan-heart-mob-x1.png');
 
       @media screen and (min-resolution: 2dppx) {
-        // background-image: url('../images/Advantages/Mobile/advan-heart-mob-x2.png');
         background-image: url('../images/advantages/mobile/advan-heart-mob-x2.png');
       }
     }
   }
+}
 
-  &__title {
-    margin-bottom: 19px;
-    font-family: 'Titan One', cursive;
-    font-size: 36px;
-    line-height: calc(41 / 36);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $accent-color;
+@media screen and (min-width: $tablet) {
+  .features {
+    padding-top: 20px;
+
+    &__list {
+      display: flex;
+      gap: 4px;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+      font-size: 48px;
+      line-height: calc(55 / 48);
+    }
+
+    &__descr {
+      max-width: 180px;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
   }
 
-  &__descr {
-    max-width: 230px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: calc(20 / 12);
+  .features__item {
+    &::before {
+      margin-bottom: 36px;
+    }
+
+    &--cup::before {
+      width: 50px;
+      background-image: url('../images/advantages/tablet/advan-cup-tab-x1.png');
+      transform: translateX(-9px);
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/tablet/advan-cup-tab-x2.png');
+      }
+    }
+
+    &--apple::before {
+      width: 50px;
+      background-image: url('../images/advantages/tablet/advan-apples-tab-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/tablet/advan-apples-tab-x2.png');
+      }
+    }
+
+    &--heart::before {
+      width: 44px;
+      background-image: url('../images/advantages/tablet/advan-heart-tab-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/tablet/advan-heart-tab-x2.png');
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .features {
+    padding-top: 30px;
+
+    &__list {
+      gap: 100px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+      font-size: 58px;
+      line-height: calc(66 / 58);
+    }
+
+    &__descr {
+      max-width: 300px;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .features__item {
+    &::before {
+      margin-bottom: 40px;
+    }
+
+    &--cup::before {
+      background-image: url('../images/advantages/desktop/advan-cup-des-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/desktop/advan-cup-des-x2.png');
+      }
+    }
+
+    &--apple::before {
+      background-image: url('../images/advantages/desktop/advan-apples-des-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/desktop/advan-apples-des-x2.png');
+      }
+    }
+
+    &--heart::before {
+      background-image: url('../images/advantages/desktop/advan-heart-des-x1.png');
+
+      @media screen and (min-resolution: 2dppx) {
+        background-image: url('../images/advantages/desktop/advan-heart-des-x2.png');
+      }
+    }
   }
 }

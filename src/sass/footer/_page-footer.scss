@@ -1,6 +1,10 @@
 .page-footer {
     // padding-bottom: 3px;
     background-color: $secondary-background-color;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 60px;
+    }
 }
 
 .page-footer__container {
@@ -103,18 +107,31 @@
     padding-bottom: 3px;
     border-top: 1px solid #E1E1E1;
 
+    @media screen and (min-width: $tablet) {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 7px;
+        padding-bottom: 4px;
+    }
 
 }
 
 .page-footer__copyright {
-    max-width: 150px;
-    margin-right: auto;
-    margin-left: auto;
 
     font-weight: 700;
     line-height: 1.52;
 
     color: $secondary-text-color;
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 150px;
+    }
 
     @media screen and (min-width: $tablet) {
         line-height: 1.86;

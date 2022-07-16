@@ -15,5 +15,13 @@
         }
     }
 
+    &--with-accent-hover {
+
+        &:hover,
+        &:focus {
+            background-color: #A61035;
+        }
+    }
+
 
 }

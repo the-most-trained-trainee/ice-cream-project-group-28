@@ -5,6 +5,9 @@
     $primary-background-color 23%,
     $secondary-background-color 77%
   );
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 60px;
+  }
   @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
     background-image: linear-gradient(
       to bottom,
@@ -151,9 +154,16 @@
       background-color: #E1E1E1;
     }
   }
+
   &__content .link {
     display: block;
     line-height: 1.5;
+    color: $secondary-text-color;
+    transition: color $default-transition-time $default-transition-function;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
   }
   &__text {
     margin-bottom: 24px;
@@ -173,7 +183,4 @@
   &__weekends {
     margin-bottom: 24px;
   }
-}
-.link {
-  color: $secondary-text-color;
 }

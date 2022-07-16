@@ -2,11 +2,11 @@
 
     transition: color $default-transition-time $default-transition-function;
     text-decoration: none;
+    color: inherit;
 
-
-    &:visited {
-        color: inherit;
-    }
+    // &:visited {
+    //     color: inherit;
+    // }
 
     &:hover,
     &:focus,

@@ -1,15 +1,16 @@
 .contacts {
   padding-bottom: 40px;
   background-image: linear-gradient(
-    to top,
-    $secondary-background-color 77%,
-    $primary-background-color 23%
+    to bottom,
+    $primary-background-color 23%,
+    $secondary-background-color 77%
   );
   @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
     background-image: linear-gradient(
-      to top,
-      $secondary-background-color 50%,
-      $primary-background-color 50%
+      to bottom,
+      $primary-background-color 50%,
+      $secondary-background-color 50%
+      
     );
   }
   & .container {
@@ -136,6 +137,9 @@
     text-transform: uppercase;
     text-align: center;
     color: $primary-inverse-text-color;
+    &--color {
+      background-color: #C2E297;
+    }
   }
   &__content {
     margin-top: 24px;

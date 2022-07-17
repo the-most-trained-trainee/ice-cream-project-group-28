@@ -6,17 +6,6 @@
   @media screen and (min-width: $tablet) {
     padding-top: 102px;
     padding-bottom: 56px;
-    // background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png),
-    //   url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
-    // @media (min-device-pixel-ratio: 2),
-    //   (min-resolution: 192dpi),
-    //   (min-resolution: 2dppx) {
-    //   background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png),
-    //     url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
-    // }
-    // background-repeat: no-repeat;
-    // background-position: 32px 246px, 546px 265px;
-    // background-size: 152px 154px, 190px 150px;
   }
   @media screen and (min-width: $desktop) {
     padding-top: 147px;
@@ -27,22 +16,6 @@
   overflow: hidden;
 }
 
-// .test {
-//   @media screen and (min-width: $tablet) {
-//     background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png),
-//       url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
-//     @media (min-device-pixel-ratio: 2),
-//       (min-resolution: 192dpi),
-//       (min-resolution: 2dppx) {
-//       background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png),
-//         url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
-//     }
-//     background-repeat: no-repeat;
-//     background-position: 32px 156px, 146px 65px;
-//     background-size: 152px 154px, 190px 150px;
-//   }
-//   overflow: visible;
-// }
 .hero__container {
   display: flex;
   justify-content: space-between;
@@ -53,32 +26,32 @@
   width: 171px;
   height: 410px;
   position: absolute;
-  background-image: url(/src/images/hero-header/mobile/header-ice-mob-x1.png);
+  background-image: url(../images/hero-header/mobile/header-ice-mob-x1.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(/src/images/hero-header/mobile/header-ice-mob-x2.png);
+    background-image: url(../images/hero-header/mobile/header-ice-mob-x2.png);
     background-size: contain;
   }
   @media screen and (min-width: $tablet) {
     width: 146px;
     height: 330px;
-    background-image: url(/src/images/hero-header/tablet/header-ice-tab-x1.png);
+    background-image: url(../images/hero-header/tablet/header-ice-tab-x1.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(/src/images/hero-header/tablet/header-ice-tab-x2.png);
+      background-image: url(../images/hero-header/tablet/header-ice-tab-x2.png);
       background-size: contain;
     }
   }
   @media screen and (min-width: $desktop) {
     width: 236px;
     height: 557px;
-    background-image: url(/src/images/hero-header/desktop/header-ice-des-x1.png);
+    background-image: url(../images/hero-header/desktop/header-ice-des-x1.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(/src/images/hero-header/desktop/header-ice-des-x2.png);
+      background-image: url(../images/hero-header/desktop/header-ice-des-x2.png);
       background-size: contain;
     }
   }
@@ -216,7 +189,7 @@
     line-height: 1.42;
   }
 }
-.hero__btn {
+.hero__text-button {
   display: none;
   @extend %flex-center;
 
@@ -233,7 +206,7 @@
     height: 26px;
   }
 }
-.btn--color__cherry {
+.hero__text-button--color__cherry {
   color: $accent-color;
 }
 
@@ -248,30 +221,29 @@
   position: absolute;
   bottom: -36px;
   left: -152px;
-  background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png);
+  background-repeat: no-repeat;
+  background-image: url(../images/hero-header/tablet/header-milk-tab-x1.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png);
+    background-image: url(../images/hero-header/tablet/header-milk-tab-x2.png);
     background-size: contain;
   }
 
   @media screen and (min-width: $desktop) {
     width: 213px;
     height: 216px;
-    background-image: url(/src/images/hero-header/desktop/header-milk-des-x2.png);
+    background-image: url(../images/hero-header/desktop/header-milk-des-x2.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(/src/images/hero-header/desktop/header-milk-des-x2.png);
+      background-image: url(../images/hero-header/desktop/header-milk-des-x2.png);
     }
 
     background-size: contain;
     bottom: -36px;
     left: -213px;
   }
-  background-repeat: no-repeat;
-  background-position: center;
 
   z-index: 0;
 }
@@ -345,34 +317,32 @@
   position: absolute;
   width: 190px;
   height: 150px;
+  right: 0;
   bottom: -21%;
+
   @media screen and (min-width: $tablet) {
-    background-image: url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
+    background-image: url(../images/hero-header/tablet/header-girl-tab-x1.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
+      background-image: url(../images/hero-header/tablet/header-girl-tab-x2.png);
     }
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
   }
   @media screen and (min-width: $desktop) {
     width: 304px;
     height: 241px;
-    background-image: url(/src/images/hero-header/desktop/header-girl-des-x1.png);
+    bottom: -19%;
+    background-image: url(../images/hero-header/desktop/header-girl-des-x1.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(/src/images/hero-header/desktop/header-girl-des-x2.png);
+      background-image: url(../images/hero-header/desktop/header-girl-des-x2.png);
     }
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
-    bottom: -19%;
   }
-
-  right: 0;
 
   z-index: -2;
 }

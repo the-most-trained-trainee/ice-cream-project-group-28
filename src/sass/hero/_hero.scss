@@ -18,7 +18,10 @@
     // background-position: 32px 246px, 546px 265px;
     // background-size: 152px 154px, 190px 150px;
   }
-
+  @media screen and (min-width: $tablet) {
+    padding-top: 147px;
+    padding-bottom: 84px;
+  }
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -103,15 +106,20 @@
   display: inline-block;
 
   width: 220px;
-
+  margin-bottom: 20px;
   @media screen and (min-width: $tablet) {
     width: 162px;
     font-size: 22px;
     line-height: 1.13;
   }
+  @media screen and (min-width: $desktop) {
+    width: 277px;
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
 
   z-index: 0;
-  margin-bottom: 20px;
 }
 .hero__subtitle {
   color: $accent-color;
@@ -119,12 +127,18 @@
   @media screen and (min-width: $tablet) {
     font-size: 34px;
   }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
 }
 
 .hero__ul {
   display: flex;
   @media screen and (min-width: $tablet) {
     margin-bottom: 61px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 108px;
   }
 }
 .hero__list:not(:last-child) {
@@ -134,19 +148,11 @@
 .button--color__cherry {
   background-color: $accent-color;
   color: $primary-inverse-text-color;
-  &:hover,
-  &:focus {
-    background-color: $secondary-title-color;
-  }
 }
 
 .button--color__white {
   background-color: $primary-background-color;
   color: $accent-color;
-  &:hover,
-  &:focus {
-    background-color: $default-button-hover-bg-color;
-  }
 }
 .hero__button {
   display: block;
@@ -154,6 +160,14 @@
   line-height: 1.25;
   box-sizing: border-box;
   height: 24px;
+
+  @media screen and (min-width: $desktop) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.28;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   padding-left: 14px;
   padding-right: 14px;
@@ -170,6 +184,12 @@
   @media screen and (min-width: $tablet) {
     display: inline-block;
   }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
 }
 .hero__btn {
   display: none;
@@ -181,6 +201,11 @@
   background-color: $primary-background-color;
   @media screen and (min-width: $tablet) {
     display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    width: 26px;
+    height: 26px;
   }
 }
 .btn--color__cherry {

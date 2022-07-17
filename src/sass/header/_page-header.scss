@@ -39,6 +39,9 @@
     height: 100%;
     
     background-color: #E17992;
+   
+
+    
 
     @media screen and (min-width: 768px) {
         width: 70%;
@@ -55,13 +58,23 @@
 .is-open {
     @media screen and (max-width: 1199px) {
         display: flex;
+    
+
     }
 }
+
+.header__menu.is-open {
+
+  }
+
+
 
 .header__menu-wrapper{
     width: 100%;
 
     margin: 0 auto;
+
+   
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -72,8 +85,8 @@
 
 
 .header__menu-close-btn {
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-right: 15px;
+    margin-top: 25px;
     margin-left: auto;
     display: flex;
 
@@ -208,4 +221,67 @@
     color: $accent-color;
 }
 
+.header__menu-btn-open {
+    text-align: center;
+
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+
+    background-color: transparent;
+
+    @media screen and (min-width: 768px){
+        margin-right: 32px;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+
+}
+
+.header__menu-btn-icon-open {
+    fill: $accent-color;
+
+    &:hover {
+        fill: #ffffff;
+    }
+}
+
+.header__tb-btn {
+    display: inline-flex;
+
+    text-align: center;
+    justify-content: center;
+
+
+    padding-top: 12px;
+
+
+    height: 44px;
+    width: 186px;
+
+    background-color: #fff;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.header__tb-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: $accent-color;
+}
+
+.header__tb-icon {
+    fill: $accent-color;
+    margin-left: 10px;
+}
 

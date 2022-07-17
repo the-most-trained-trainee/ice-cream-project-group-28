@@ -3,10 +3,22 @@
 
   padding-top: 194px;
   padding-bottom: 158px;
-
+  @media screen and (min-width: $tablet) {
+    padding-top: 102px;
+    padding-bottom: 56px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 147px;
+    padding-bottom: 84px;
+  }
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero__container::after {
@@ -14,12 +26,34 @@
   width: 171px;
   height: 410px;
   position: absolute;
-  background-image: url(/src/images/hero-header/mobile/header-ice-mob-x1.png);
+  background-image: url(../images/hero-header/mobile/header-ice-mob-x1.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(/src/images/hero-header/mobile/header-ice-mob-x2.png);
+    background-image: url(../images/hero-header/mobile/header-ice-mob-x2.png);
     background-size: contain;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 146px;
+    height: 330px;
+    background-image: url(../images/hero-header/tablet/header-ice-tab-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/tablet/header-ice-tab-x2.png);
+      background-size: contain;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    height: 557px;
+    background-image: url(../images/hero-header/desktop/header-ice-des-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/desktop/header-ice-des-x2.png);
+      background-size: contain;
+    }
   }
   background-repeat: no-repeat;
   background-position: center;
@@ -35,9 +69,18 @@
   position: absolute;
   background-color: $secondary-title-color;
   border-radius: 50%;
+
   width: 346px;
   height: 344px;
 
+  @media screen and (min-width: $tablet) {
+    width: 335px;
+    height: 333px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 534px;
+    height: 534px;
+  }
   top: 50%;
   left: 50%;
   transform: translate(-36%, -50%);
@@ -56,17 +99,40 @@
   display: inline-block;
 
   width: 220px;
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    width: 162px;
+    font-size: 22px;
+    line-height: 1.13;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 277px;
+    font-size: 38px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
 
   z-index: 0;
-  margin-bottom: 20px;
 }
 .hero__subtitle {
   color: $accent-color;
   font-size: 48px;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 58px;
+  }
 }
 
 .hero__ul {
   display: flex;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 61px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 108px;
+  }
 }
 .hero__list:not(:last-child) {
   margin-right: 8px;
@@ -75,28 +141,208 @@
 .button--color__cherry {
   background-color: $accent-color;
   color: $primary-inverse-text-color;
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    background-color: $primary-inverse-text-color;
-  }
 }
 
 .button--color__white {
   background-color: $primary-background-color;
   color: $accent-color;
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-    color: $primary-inverse-text-color;
-  }
 }
 .hero__button {
+  display: block;
   font-size: 8px;
   line-height: 1.25;
   box-sizing: border-box;
   height: 24px;
 
+  @media screen and (min-width: $desktop) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.28;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   padding-left: 14px;
   padding-right: 14px;
+}
+.hero__text--wrap {
+  margin-left: 152px;
+  position: relative;
+  @media screen and (min-width: $desktop) {
+    margin-left: 215px;
+  }
+}
+.hero__text {
+  display: none;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $primary-inverse-text-color;
+  width: 114px;
+  margin-bottom: 7px;
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 20px;
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+}
+.hero__text-button {
+  display: none;
+  @extend %flex-center;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $primary-background-color;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    width: 26px;
+    height: 26px;
+  }
+}
+.hero__text-button--color__cherry {
+  color: $accent-color;
+}
+
+.hero__text--wrap::before {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  content: '';
+  width: 152px;
+  height: 154px;
+  position: absolute;
+  bottom: -36px;
+  left: -152px;
+  background-repeat: no-repeat;
+  background-image: url(../images/hero-header/tablet/header-milk-tab-x1.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero-header/tablet/header-milk-tab-x2.png);
+    background-size: contain;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 213px;
+    height: 216px;
+    background-image: url(../images/hero-header/desktop/header-milk-des-x2.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/desktop/header-milk-des-x2.png);
+    }
+
+    background-size: contain;
+    bottom: -36px;
+    left: -213px;
+  }
+
+  z-index: 0;
+}
+
+.count__wrap {
+  position: relative;
+  margin-right: 10px;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 25px;
+  }
+}
+.count__ul {
+  text-align: right;
+}
+.count__list:not(:last-child) {
+  margin-bottom: 17px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
+
+.count__number {
+  position: relative;
+  font-family: 'Titan One', 'cursive';
+
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $accent-color;
+}
+.count__number::before {
+  content: '';
+  position: absolute;
+  background-color: $primary-inverse-text-color;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+  }
+  left: 85%;
+
+  z-index: -2;
+}
+.count__text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-inverse-text-color;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
+}
+
+.count__wrap::after {
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 150px;
+  right: 0;
+  bottom: -21%;
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/hero-header/tablet/header-girl-tab-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/tablet/header-girl-tab-x2.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 304px;
+    height: 241px;
+    bottom: -19%;
+    background-image: url(../images/hero-header/desktop/header-girl-des-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero-header/desktop/header-girl-des-x2.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  z-index: -2;
 }

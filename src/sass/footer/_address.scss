@@ -23,4 +23,8 @@
 
 .address__tel {
     color: $accent-color;
+
+    &:hover {
+        color: $secondary-text-color;
+    }
 }

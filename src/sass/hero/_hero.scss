@@ -3,10 +3,46 @@
 
   padding-top: 194px;
   padding-bottom: 158px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 102px;
+    padding-bottom: 56px;
+    // background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png),
+    //   url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
+    // @media (min-device-pixel-ratio: 2),
+    //   (min-resolution: 192dpi),
+    //   (min-resolution: 2dppx) {
+    //   background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png),
+    //     url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
+    // }
+    // background-repeat: no-repeat;
+    // background-position: 32px 246px, 546px 265px;
+    // background-size: 152px 154px, 190px 150px;
+  }
 
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+
+// .test {
+//   @media screen and (min-width: $tablet) {
+//     background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png),
+//       url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
+//     @media (min-device-pixel-ratio: 2),
+//       (min-resolution: 192dpi),
+//       (min-resolution: 2dppx) {
+//       background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png),
+//         url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
+//     }
+//     background-repeat: no-repeat;
+//     background-position: 32px 156px, 146px 65px;
+//     background-size: 152px 154px, 190px 150px;
+//   }
+//   overflow: visible;
+// }
+.hero__container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero__container::after {
@@ -20,6 +56,17 @@
     (min-resolution: 2dppx) {
     background-image: url(/src/images/hero-header/mobile/header-ice-mob-x2.png);
     background-size: contain;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 146px;
+    height: 330px;
+    background-image: url(/src/images/hero-header/tablet/header-ice-tab-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero-header/tablet/header-ice-tab-x2.png);
+      background-size: contain;
+    }
   }
   background-repeat: no-repeat;
   background-position: center;
@@ -57,16 +104,28 @@
 
   width: 220px;
 
+  @media screen and (min-width: $tablet) {
+    width: 162px;
+    font-size: 22px;
+    line-height: 1.13;
+  }
+
   z-index: 0;
   margin-bottom: 20px;
 }
 .hero__subtitle {
   color: $accent-color;
   font-size: 48px;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
 }
 
 .hero__ul {
   display: flex;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 61px;
+  }
 }
 .hero__list:not(:last-child) {
   margin-right: 8px;
@@ -77,8 +136,7 @@
   color: $primary-inverse-text-color;
   &:hover,
   &:focus {
-    color: $accent-color;
-    background-color: $primary-inverse-text-color;
+    background-color: $secondary-title-color;
   }
 }
 
@@ -87,11 +145,11 @@
   color: $accent-color;
   &:hover,
   &:focus {
-    background-color: $accent-color;
-    color: $primary-inverse-text-color;
+    background-color: $default-button-hover-bg-color;
   }
 }
 .hero__button {
+  display: block;
   font-size: 8px;
   line-height: 1.25;
   box-sizing: border-box;
@@ -99,4 +157,111 @@
 
   padding-left: 14px;
   padding-right: 14px;
+}
+.hero__text {
+  position: relative;
+  // margin-left: 152px;
+  display: none;
+  font-size: 8px;
+  line-height: 1.5;
+  color: $primary-inverse-text-color;
+  width: 114px;
+  margin-bottom: 7px;
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
+}
+.hero__btn {
+  display: none;
+  @extend %flex-center;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: $primary-background-color;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+.btn--color__cherry {
+  color: $accent-color;
+}
+
+// .hero__text::before {
+//   content: '';
+//   width: 152px;
+//   height: 154px;
+//   position: absolute;
+//   background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png);
+//   @media (min-device-pixel-ratio: 2),
+//     (min-resolution: 192dpi),
+//     (min-resolution: 2dppx) {
+//     background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png);
+//     background-size: contain;
+//   }
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   // bottom: 40px;
+//   left: 0;
+//   z-index: 0;
+// }
+
+.count__wrap {
+  margin-right: 10px;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+.count__ul {
+  text-align: right;
+}
+.count__list:not(:last-child) {
+  margin-bottom: 17px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
+
+.count__number {
+  position: relative;
+  font-family: 'Titan One', 'cursive';
+
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.14;
+  @media screen and (min-width: $desktop) {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $accent-color;
+}
+.count__number::before {
+  content: '';
+  position: absolute;
+  background-color: $primary-inverse-text-color;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  @media screen and (min-width: $desktop) {
+    width: 30px;
+    height: 30px;
+  }
+  left: 85%;
+
+  z-index: -2;
+}
+.count__text {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  color: $primary-inverse-text-color;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 1.28;
+  }
 }

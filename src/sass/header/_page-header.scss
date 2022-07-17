@@ -39,6 +39,9 @@
     height: 100%;
     
     background-color: #E17992;
+   
+
+    
 
     @media screen and (min-width: 768px) {
         width: 70%;
@@ -55,13 +58,23 @@
 .is-open {
     @media screen and (max-width: 1199px) {
         display: flex;
+    
+
     }
 }
+
+.header__menu.is-open {
+
+  }
+
+
 
 .header__menu-wrapper{
     width: 100%;
 
     margin: 0 auto;
+
+   
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -72,8 +85,8 @@
 
 
 .header__menu-close-btn {
-    margin-right: 20px;
-    margin-top: 20px;
+    margin-right: 15px;
+    margin-top: 25px;
     margin-left: auto;
     display: flex;
 
@@ -209,12 +222,9 @@
 }
 
 .header__menu-btn-open {
-    height: 40px;
-    width: 40px;
     text-align: center;
 
     margin-left: auto;
-    margin-right: 30px;
     padding: 0;
     border: 0;
     cursor: pointer;

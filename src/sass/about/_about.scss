@@ -9,7 +9,7 @@
 }
 @media screen and (min-width: 1200px) {
   .about {
-    background-image: url(/src/images/About/desktop/about-bgmilk-des-x1.png);
+    background-image: url(../images/about/desktop/about-bgmilk-des-x1.png);
     background-position: 50% 77%;
     background-repeat: no-repeat;
     background-size: 1200px;
@@ -19,7 +19,7 @@
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2x) {
   .about {
-    background-image: url(/src/images/About/desktop/about-bgmilk-des-x2.png);
+    background-image: url(../images/about/desktop/about-bgmilk-des-x2.png);
   }
 }
 .about__header {
@@ -147,7 +147,7 @@
     height: 209px;
     z-index: -1;
     pointer-events: none;
-    background-image: url(/src/images/About/mobile/about-bgmilk-mob-x1.png);
+    background-image: url(../images/about/mobile/about-bgmilk-mob-x1.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -159,7 +159,7 @@
   screen and (max-width: 767.98px) and (min-resolution: 192dpi),
   screen and (max-width: 767.98px) and (min-resolution: 2x) {
   .about__text--color:before {
-    background-image: url(/src/images/About/mobile/about-bgmilk-mob-x2.png);
+    background-image: url(../images/about/mobile/about-bgmilk-mob-x2.png);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {

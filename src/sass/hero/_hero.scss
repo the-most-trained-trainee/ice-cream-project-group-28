@@ -18,7 +18,7 @@
     // background-position: 32px 246px, 546px 265px;
     // background-size: 152px 154px, 190px 150px;
   }
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $desktop) {
     padding-top: 147px;
     padding-bottom: 84px;
   }
@@ -71,6 +71,17 @@
       background-size: contain;
     }
   }
+  @media screen and (min-width: $desktop) {
+    width: 236px;
+    height: 557px;
+    background-image: url(/src/images/hero-header/desktop/header-ice-des-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero-header/desktop/header-ice-des-x2.png);
+      background-size: contain;
+    }
+  }
   background-repeat: no-repeat;
   background-position: center;
   bottom: 0;
@@ -85,9 +96,18 @@
   position: absolute;
   background-color: $secondary-title-color;
   border-radius: 50%;
+
   width: 346px;
   height: 344px;
 
+  @media screen and (min-width: $tablet) {
+    width: 335px;
+    height: 333px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 534px;
+    height: 534px;
+  }
   top: 50%;
   left: 50%;
   transform: translate(-36%, -50%);
@@ -172,9 +192,12 @@
   padding-left: 14px;
   padding-right: 14px;
 }
+.hero__text--wrap {
+  margin-left: 152px;
+}
 .hero__text {
   position: relative;
-  // margin-left: 152px;
+
   display: none;
   font-size: 8px;
   line-height: 1.5;
@@ -236,6 +259,9 @@
   display: none;
   @media screen and (min-width: $tablet) {
     display: block;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 25px;
   }
 }
 .count__ul {

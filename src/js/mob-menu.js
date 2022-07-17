@@ -11,10 +11,10 @@
 
      document.body.classList.toggle('no-scroll');
 
-    // const scrollLockMethod = !isMenuOpen
-    //   ? 'disableBodyScroll'
-    //   : 'enableBodyScroll';
-    // bodyScrollLock[scrollLockMethod](document.body);
+    const scrollLockMethod = !isMenuOpen
+      ? 'disableBodyScroll'
+      : 'enableBodyScroll';
+    bodyScrollLock[scrollLockMethod](document.body);
   
   };
 

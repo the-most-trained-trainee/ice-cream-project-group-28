@@ -1,4 +1,17 @@
+.section--no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
 
+    @media screen and (min-width: $tablet) {
+            padding-bottom: 20;
+        }
+    @media screen and (min-width: $desktop) {
+        padding-top: 60;
+        padding-bottom: 60;
+    }
+
+    
+}
 
 .swiper {
     width: 100%;

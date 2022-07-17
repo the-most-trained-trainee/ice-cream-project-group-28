@@ -1,6 +1,6 @@
 .about {
     background-color: $secondary-background-color;
-    padding: 60px 0 40px;
+    padding: 60px 0 20px;
 }
 @media screen and (min-width: 768px) {
   .about {
@@ -30,6 +30,7 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.14;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__header {
@@ -86,6 +87,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .about__img {
@@ -103,7 +105,7 @@
   z-index: 2;
   color: $primary-text-color;
   padding-right: 60px;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   font-family: Dm Sans, sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -192,7 +194,7 @@
   border: none;
   border-radius: 22px;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 12px 37px;
   font-family: Dm Sans, sans-serif;
   font-size: 14px;

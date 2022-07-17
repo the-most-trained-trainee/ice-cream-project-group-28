@@ -1,10 +1,8 @@
-// .reviews {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-// }
+
 
 .swiper {
     width: 100%;
+    
 
 }
 
@@ -27,32 +25,91 @@
     bottom: 0;
 }
 
-.swiper-pagination-bullet-active {
+// ФОТО АВАТАРА
+
+.thumb {
+    // на таблетку 150px
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+    overflow: hidden;
+    box-shadow: rgb(5, 244, 113) 0px 20px 30px -10px;
+}
+
+.thumb__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
     
-    // background-image: url(../image/home.svg);
-    display: inline-flex;
-    height: 12px;
-    width: 12px;
+}
+
+// зміна значків падінейшин початок
+.swiper-pagination-bullet {
+    background-color: #c97c8e;
+    opacity: 0.7;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 0;
+    border-radius: 50%;
+
 
 }
 
-.swiper-slide__avatar {
-    // background-image: url(../image/reviews/first.png);
+.swiper-pagination-bullet:first-child {
 
-    height: 85px;
-    width: 85px;
-    margin-bottom: 32px;
-    // background-color: aqua;
+    background-image: url(../images/customer-reviews/reviews/bgi-jul.png);
 
-    // background-size: contain;
-    // background-position: center;
-    // background-repeat: no-repeat;
 }
+
+.swiper-pagination-bullet:nth-child(2) {
+
+    background-image: url(../images/customer-reviews/reviews/bgi-max.png);
+}
+
+.swiper-pagination-bullet:nth-child(3) {
+
+    background-image: url(../images/customer-reviews/reviews/bgi-maks.png);
+}
+
+.swiper-pagination-bullet:nth-child(4) {
+
+    background-image: url(../images/customer-reviews/reviews/bgi-lavr.png);
+}
+
+
+
+.swiper-pagination-bullet-active {
+    background-color: transparent;
+     // background-image: url(../image/home.svg);
+    display: inline-flex;
+    // на таблетку 70рх
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    
+
+}
+.swiper-pagination-bullet-active:nth-child(3n + 1){
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px;
+
+}
+.swiper-pagination-bullet-active:nth-child(3n+2){
+    box-shadow: rgba(240, 146, 20, 0.4) 5px 5px, rgba(240, 146, 20, 0.3) 10px 10px, rgba(240, 146, 20, 0.2) 15px 15px, rgba(240, 146, 20, 0.1) 20px 20px;
+}
+.swiper-pagination-bullet-active:nth-child(3n+3) {
+    box-shadow: rgba(54, 238, 63, 0.4) 5px 5px, rgba(54, 238, 63, 0.3) 10px 10px, rgba(54, 238, 63, 0.2) 15px 15px, rgba(54, 238, 63, 0.1) 20px 20px;
+}
+
+
 
 .swiper-slide__content {
     position: relative;
@@ -62,19 +119,37 @@
     padding-top: 43px;
     padding-bottom: 17px;
 
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     
-
-
+}
+.swiper-slide__subtitle {
+    position: relative;
 }
 
-.slider__text::after {
-    content: ' ';
-    color: #E1E1E1;
-    font-size: 120px;
+.swiper-slide__content::after {
+
+    content: '\22EF';
     position: absolute;
-    top: 20px;
-    left: 50px;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+
+    color: #C7133E;
+    font-size: 40px;
+}
+
+
+.swiper-slide__content::before {
+    content: ' ';
+    position: absolute;
+    top: 30px;
+    left: 53px;
+    z-index: 1;
+    background-image: url(../images/customer-reviews/mobile/cust-quotes-mob-x1.png);
+    width:54px;
+    height:40px;
+
     
 }
 
@@ -82,7 +157,8 @@
 
 .swiper-slide__text {
     flex-basis: 87%;
-    text-indent: 54px;
+    
+    z-index: 2;
 
     font-size: 12px;
     line-height: 2.58;
@@ -105,8 +181,7 @@
 
 .swiper-slide__subtitle {
 
-    
     line-height: 1.86;
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 56px;
 }

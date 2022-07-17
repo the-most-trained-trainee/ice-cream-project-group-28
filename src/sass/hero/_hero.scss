@@ -194,10 +194,12 @@
 }
 .hero__text--wrap {
   margin-left: 152px;
+  position: relative;
+  @media screen and (min-width: $desktop) {
+    margin-left: 215px;
+  }
 }
 .hero__text {
-  position: relative;
-
   display: none;
   font-size: 8px;
   line-height: 1.5;
@@ -235,26 +237,47 @@
   color: $accent-color;
 }
 
-// .hero__text::before {
-//   content: '';
-//   width: 152px;
-//   height: 154px;
-//   position: absolute;
-//   background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png);
-//   @media (min-device-pixel-ratio: 2),
-//     (min-resolution: 192dpi),
-//     (min-resolution: 2dppx) {
-//     background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png);
-//     background-size: contain;
-//   }
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   // bottom: 40px;
-//   left: 0;
-//   z-index: 0;
-// }
+.hero__text--wrap::before {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+  content: '';
+  width: 152px;
+  height: 154px;
+  position: absolute;
+  bottom: -36px;
+  left: -152px;
+  background-image: url(/src/images/hero-header/tablet/header-milk-tab-x1.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(/src/images/hero-header/tablet/header-milk-tab-x2.png);
+    background-size: contain;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 213px;
+    height: 216px;
+    background-image: url(/src/images/hero-header/desktop/header-milk-des-x2.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero-header/desktop/header-milk-des-x2.png);
+    }
+
+    background-size: contain;
+    bottom: -36px;
+    left: -213px;
+  }
+  background-repeat: no-repeat;
+  background-position: center;
+
+  z-index: 0;
+}
 
 .count__wrap {
+  position: relative;
   margin-right: 10px;
   display: none;
   @media screen and (min-width: $tablet) {
@@ -315,4 +338,41 @@
     font-size: 14px;
     line-height: 1.28;
   }
+}
+
+.count__wrap::after {
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 150px;
+  bottom: -21%;
+  @media screen and (min-width: $tablet) {
+    background-image: url(/src/images/hero-header/tablet/header-girl-tab-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero-header/tablet/header-girl-tab-x2.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 304px;
+    height: 241px;
+    background-image: url(/src/images/hero-header/desktop/header-girl-des-x1.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero-header/desktop/header-girl-des-x2.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    bottom: -19%;
+  }
+
+  right: 0;
+
+  z-index: -2;
 }

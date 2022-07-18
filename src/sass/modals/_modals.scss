@@ -1,0 +1,532 @@
+// Header / Buy Now Modal
+
+.mob-menu__modal {
+  display: block;
+  width: 90vw;
+  border-radius: 15px;
+  border: #ffffff solid 3px;
+  background-color: #e17992;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mob-menu__modal--backdrop {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  &.mob-menu__modal--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.mob-menu__modal--close-btn {
+  border: none;
+  display: block;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-top: 8px;
+  outline: none;
+  background-color: transparent;
+}
+
+.mob-menu__modal--close-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+}
+
+.mob-menu__modal--heading {
+  color: #e17992;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.mob-menu__modal--listing-products {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-basis: 85%;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.mob-menu__modal-card {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: dotted 1px #eaa6b6;
+  padding: 5px;
+  & > img {
+    width: 100%;
+    display: inline-block;
+  }
+  & > h3 {
+    text-align: center;
+    color: grey;
+  }
+}
+
+.mob-menu__modal--product-pict {
+  width: 15vw;
+  height: 15vw;
+}
+
+.mob-menu__modal-card-icon {
+  fill: none;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+// Stpper Style
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  height: auto;
+}
+
+.stepper {
+  border: 1px solid #e17992;
+  display: inline-block;
+  overflow: visible;
+  height: 2.1em;
+  background: #fff;
+  padding: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.stepper input {
+  width: 1.5em;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  color: #000;
+}
+
+.stepper button {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: 0.1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: #eee;
+  color: #e17992;
+  border: none;
+}
+
+.mob-menu__modal--stepper {
+  display: flex;
+  flex-direction: row;
+  & button {
+    display: inline-block;
+  }
+  & span {
+    display: inline-block;
+  }
+  & input {
+    display: inline-block;
+  }
+}
+
+// About / Read More Modal
+
+.about__readmore-modal {
+  display: block;
+  width: 90vw;
+  max-width: 500px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.about__readmore-text {
+  overflow-y: scroll;
+  height: 95%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+  margin-top: 20px;
+  & > h3 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: #000000;
+  }
+  & > p {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #907e82;
+    padding-bottom: 20px;
+  }
+}
+
+.about__readmore-modal--backdrop {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  &.about__readmore-modal--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.about__readmore-modal--close-btn {
+  border: none;
+  display: block;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-top: 8px;
+  outline: none;
+  background-color: transparent;
+}
+
+.about__readmore-modal--close-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+}
+
+.about__readmore-modal--heading {
+  font-style: italic;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: 1px dotted $secondary-text-color;
+}
+
+// Contacts / Locations Modal
+
+.modal-default-container {
+  display: block;
+  width: 90vw;
+  max-width: 450px;
+  border-radius: 15px;
+  border: #fff5f6 solid 3px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__locations-modal--backdrop {
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  &.contact__locations-modal--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.contact__locations-modal--close-btn {
+  border: none;
+  display: block;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-top: 8px;
+  outline: none;
+  background-color: transparent;
+}
+
+.contact__locations-modal--close-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #fea5bb;
+}
+
+.contact__locations-modal--heading {
+  margin-top: 10px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 186%;
+  color: #907e82;
+  text-align: center;
+}
+
+.contact__locations-modal--sub-heading {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contact__locations-modal--sub-heading2 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+  color: #907e82;
+}
+
+.contact__locations-modal--text {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 8px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #ffa5ba;
+}
+
+.contact__locations-modal--address {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #907e82;
+}
+.contact_locations__card-list {
+  margin-bottom: 25px;
+}
+.contact_locations-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  &:not(:last-child) {
+    border-bottom: 1px dotted #e1e1e1;
+  }
+}
+
+// Contacts / Franchise Modal
+
+.contact__franchise-modal {
+  display: block;
+  width: 90vw;
+  border-radius: 15px;
+  border: #ffffff solid 3px;
+  background-color: #e17992;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact__franchise-modal--backdrop {
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+  &.contact__franchise-modal--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.contact__franchise-modal--close-btn {
+  border: none;
+  display: block;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-top: 8px;
+  outline: none;
+  background-color: transparent;
+}
+
+.contact__franchise-modal--close-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+}
+
+.contact__franchise-modal--heading {
+  font-style: italic;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact__franchise-form {
+  margin-top: 5px;
+  display: block;
+  padding-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.contact__franchise-form-field-list {
+  list-style: none;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 162%;
+
+  color: #907e82;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  & li:nth-last-child(1) {
+    margin-bottom: 10px;
+  }
+  & input {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+}
+
+.contact__franchise-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  & label {
+    margin-bottom: 1px;
+  }
+}
+
+.contact__franchise-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact__franchise-field-icon {
+  position: absolute;
+  fill: #907e82;
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  transition: fill $default-transition-function $default-transition-time;
+  .contact__franchise-field-container:hover & {
+    fill: #e17992;
+  }
+  .contact__franchise-field-container:focus-within & {
+    fill: #e17992;
+  }
+}
+
+.contact__franchise-form-textarea {
+  resize: none;
+  border: 1px solid $secondary-title-color;
+  border-radius: 4px;
+  transition: border-color $default-transition-function $default-transition-time;
+  padding: 9px 10px;
+  &:hover,
+  &:focus {
+    border-color: #e17992;
+  }
+}
+
+#contact__franchise-form-name,
+#contact__franchise-form-tel,
+#contact__franchise-form-mail {
+  width: 100%;
+  padding-left: 25px;
+  border: 1px solid $secondary-title-color;
+  border-radius: 4px;
+}
+
+.contact__franchise-description {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 166%;
+  color: #907e82;
+}
+
+.contact__franchise-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 22px;
+  color: $primary-inverse-text-color;
+  height: 44px;
+  width: 115px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  // transition: background-color $default-transition-time
+  // $default-transition-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}

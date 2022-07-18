@@ -1,34 +1,36 @@
-// Header / Buy Now Modal
+// Font Mixin
 
-.mob-menu__modal {
-  display: block;
-  width: 90vw;
-  border-radius: 15px;
-  border: #ffffff solid 3px;
-  background-color: #e17992;
-  margin-left: auto;
-  margin-right: auto;
+@mixin modal-font-set($font-family: 'DM Sans', $font-weight: 500, $font-size: 14px, $line-height: 18px, $text-align: center, $letter-spacing: 0.03em, $color: $secondary-text-color) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-align: $text-align;
+  letter-spacing: $letter-spacing;
+  color: $color;
 }
 
-.mob-menu__modal--backdrop {
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  padding: 93px 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
-  &.mob-menu__modal--is-hidden {
-    opacity: 0;
-    pointer-events: none;
+// General Rules
+
+.modal-default-container {
+  display: block;
+  width: 90vw;
+  max-width: 450px;
+  border-radius: 15px;
+  border: $secondary-background-color solid 3px;
+  background-color: $primary-inverse-text-color;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  & h2,
+  & h3 {
+    text-align: center;
   }
 }
 
-.mob-menu__modal--close-btn {
+.modal-default-close-button {
   border: none;
   display: block;
   margin-left: auto;
@@ -38,20 +40,70 @@
   background-color: transparent;
 }
 
-.mob-menu__modal--close-icon {
+.modal-default-close-icon {
   display: block;
   width: 40px;
   height: 40px;
-  fill: #ffffff;
+  fill: $secondary-title-color;
 }
 
-.mob-menu__modal--heading {
-  color: #e17992;
+.modal-default-backdrop {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  padding: 93px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 450ms $default-transition-function;
+  overflow-y: scroll;
+  &.mob-menu-modal__is-hidden,
+  &.about-modal__is-hidden,
+  &.locations-modal__is-hidden,
+  &.franchise-modal__is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-default-submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  border: none;
+  border-radius: 22px;
+  color: $primary-inverse-text-color;
+  height: 44px;
+  width: 125px;
+  @include modal-font-set($font-weight: 700, $font-size: 16px, $line-height: 21px, $text-align: center, $letter-spacing: 0.03em, $color: $primary-inverse-text-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  transition: background-color $default-transition-time
+    $default-transition-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+  & svg {
+    fill: $primary-background-color;
+    margin-left: 10px;
+  }
+}
+
+// Header / Buy Now Modal
+
+.mob-menu-modal__heading {
+  color: $secondary-title-color;
   margin-top: 5px;
   text-align: center;
 }
 
-.mob-menu__modal--listing-products {
+.mob-menu-modal__products-list {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -59,17 +111,14 @@
   flex-basis: 85%;
   flex-wrap: wrap;
   margin-top: 5px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.mob-menu__modal-card {
-  position: relative;
+.mob-menu-modal__product-card {
   display: inline-block;
   width: 40%;
   background-color: rgba(255, 255, 255, 0.1);
-  border: dotted 1px #eaa6b6;
+  border: dotted 1px $secondary-title-color;
   padding: 5px;
   & > img {
     width: 100%;
@@ -77,37 +126,18 @@
   }
   & > h3 {
     text-align: center;
-    color: grey;
+    color: $secondary-text-color;
   }
 }
 
-.mob-menu__modal--product-pict {
-  width: 15vw;
-  height: 15vw;
-}
-
-.mob-menu__modal-card-icon {
-  fill: none;
-  width: 19px;
-  height: 19px;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-// Stpper Style
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  height: auto;
-}
+// Stepper Styles
 
 .stepper {
-  border: 1px solid #e17992;
+  border: 1px solid $secondary-title-color;
   display: inline-block;
   overflow: visible;
   height: 2.1em;
-  background: #fff;
+  background: $primary-background-color;
   padding: 1px;
   margin-left: auto;
   margin-right: auto;
@@ -120,7 +150,7 @@
   text-align: center;
   border: 0;
   background: transparent;
-  color: #000;
+  color: $primary-text-color;
 }
 
 .stepper button {
@@ -130,39 +160,24 @@
   line-height: 0.1em;
   font-size: 1.4em;
   padding: 0.2em !important;
-  background: #eee;
-  color: #e17992;
+  background: $secondary-background-color;
+  color: $secondary-title-color;
   border: none;
 }
 
 .mob-menu__modal--stepper {
   display: flex;
   flex-direction: row;
-  & button {
-    display: inline-block;
-  }
-  & span {
-    display: inline-block;
-  }
-  & input {
-    display: inline-block;
-  }
 }
 
 // About / Read More Modal
 
-.about__readmore-modal {
-  display: block;
-  width: 90vw;
-  max-width: 500px;
-  border-radius: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.about-modal {
   height: 85vh;
   overflow: hidden;
 }
 
-.about__readmore-text {
+.about-modal__readmore-text {
   overflow-y: scroll;
   height: 95%;
   padding-left: 30px;
@@ -170,180 +185,62 @@
   padding-bottom: 60px;
   margin-top: 20px;
   & > h3 {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 186%;
-    letter-spacing: 0.04em;
-    color: #000000;
+    @include modal-font-set($font-size: 18px, $line-height: 34px, $text-align: left, $letter-spacing: 0.04em, $color: $accent-color);
   }
   & > p {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    color: #907e82;
+    @include modal-font-set($text-align: left, $letter-spacing: 0.03em);
     padding-bottom: 20px;
   }
 }
 
-.about__readmore-modal--backdrop {
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  padding: 93px 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
-  &.about__readmore-modal--is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.about__readmore-modal--close-btn {
-  border: none;
-  display: block;
-  margin-left: auto;
-  padding-right: 8px;
-  padding-top: 8px;
-  outline: none;
-  background-color: transparent;
-}
-
-.about__readmore-modal--close-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: #ffffff;
-}
-
-.about__readmore-modal--heading {
+.about-modal__readmore-heading {
   font-style: italic;
-  color: #ffffff;
+  color: $primary-background-color;
   margin-top: 20px;
   text-align: center;
-  border-bottom: 1px dotted $secondary-text-color;
+  border-bottom: 1px dashed $secondary-title-color;
 }
 
 // Contacts / Locations Modal
 
-.modal-default-container {
-  display: block;
-  width: 90vw;
-  max-width: 450px;
-  border-radius: 15px;
-  border: #fff5f6 solid 3px;
-  background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact__locations-modal--backdrop {
-  width: 100%;
-  height: 100%;
-  padding: 93px 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
-  &.contact__locations-modal--is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.contact__locations-modal--close-btn {
-  border: none;
-  display: block;
-  margin-left: auto;
-  padding-right: 8px;
-  padding-top: 8px;
-  outline: none;
-  background-color: transparent;
-}
-
-.contact__locations-modal--close-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: #fea5bb;
-}
-
-.contact__locations-modal--heading {
+.locations-modal__heading {
   margin-top: 10px;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 186%;
-  color: #907e82;
-  text-align: center;
+  @include modal-font-set($font-weight: 700, $font-size: 18px, $line-height: 32px, $letter-spacing: 0.03em);
 }
 
-.contact__locations-modal--sub-heading {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: #000000;
-  text-align: center;
+.locations-modal__sub-heading {
+  @include modal-font-set($font-size: 16px, $letter-spacing: 0.03em, $color: $primary-text-color);
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.contact__locations-modal--sub-heading2 {
+.locations-modal__sale-place {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 18px;
-  color: #907e82;
+  @include modal-font-set($font-weight: 900);
 }
 
-.contact__locations-modal--text {
+.locations-modal__sale-address-link {
   display: block;
   margin-right: auto;
   margin-left: auto;
   margin-top: 8px;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #ffa5ba;
+  @include modal-font-set($font-size: 12px, $color: $secondary-title-color);
 }
 
-.contact__locations-modal--address {
+.locations-modal__sale-address {
   display: block;
   margin-right: auto;
   margin-left: auto;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: #907e82;
+  @include modal-font-set($font-size: 12px, $letter-spacing: 0.03em);
 }
-.contact_locations__card-list {
+
+.locations-modal__address-list {
   margin-bottom: 25px;
 }
-.contact_locations-card {
+
+.locations-modal__address-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -356,58 +253,20 @@
 
 // Contacts / Franchise Modal
 
-.contact__franchise-modal {
-  display: block;
-  width: 90vw;
-  border-radius: 15px;
-  border: #ffffff solid 3px;
-  background-color: #e17992;
-  margin-left: auto;
-  margin-right: auto;
+.franchise-modal__heading {
+  color: $primary-text-color;
 }
 
-.contact__franchise-modal--backdrop {
-  width: 100%;
-  height: 100%;
-  padding: 93px 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
-  &.contact__franchise-modal--is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
+.franchise-modal__sub-heading {
+  color: $secondary-title-color;
 }
 
-.contact__franchise-modal--close-btn {
-  border: none;
-  display: block;
-  margin-left: auto;
-  padding-right: 8px;
-  padding-top: 8px;
-  outline: none;
-  background-color: transparent;
-}
-
-.contact__franchise-modal--close-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  fill: #ffffff;
-}
-
-.contact__franchise-modal--heading {
-  font-style: italic;
-  color: #ffffff;
-  margin-top: 20px;
+.franchise-modal__form-heading {
+  color: $primary-text-color;
   text-align: center;
 }
 
-.contact__franchise-form {
+.franchise-modal__form {
   margin-top: 5px;
   display: block;
   padding-bottom: 10px;
@@ -415,20 +274,9 @@
   margin-right: 30px;
 }
 
-.contact__franchise-form-field-list {
-  list-style: none;
-
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 162%;
-
-  color: #907e82;
-
-  margin-top: 10px;
+.franchise-modal__form-field-list {
+  @include modal-font-set($line-height: 22px);
   margin-bottom: 20px;
-
   & li:nth-last-child(1) {
     margin-bottom: 10px;
   }
@@ -438,7 +286,7 @@
   }
 }
 
-.contact__franchise-form-field {
+.franchise-modal__form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
@@ -447,28 +295,30 @@
   }
 }
 
-.contact__franchise-field-container {
+.franchise-modal__field-container {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.contact__franchise-field-icon {
+.franchise-modal__field-icon {
   position: absolute;
-  fill: #907e82;
+  fill: $secondary-text-color;
   width: 16px;
   height: 16px;
   left: 8px;
   transition: fill $default-transition-function $default-transition-time;
-  .contact__franchise-field-container:hover & {
-    fill: #e17992;
+  .franchise-modal__field-container:hover & {
+    fill: $secondary-title-color;
   }
-  .contact__franchise-field-container:focus-within & {
-    fill: #e17992;
+  .franchise-modal__field-container:focus-within & {
+    fill: $secondary-title-color;
   }
 }
 
-.contact__franchise-form-textarea {
+.franchise-modal__textarea {
+  display: block;
+  width: 100%;
   resize: none;
   border: 1px solid $secondary-title-color;
   border-radius: 4px;
@@ -476,57 +326,23 @@
   padding: 9px 10px;
   &:hover,
   &:focus {
-    border-color: #e17992;
+    border-color: $secondary-title-color;
   }
 }
 
-#contact__franchise-form-name,
-#contact__franchise-form-tel,
-#contact__franchise-form-mail {
+#franchise-modal__form-name,
+#franchise-modal__form-tel,
+#franchise-modal__form-mail {
   width: 100%;
   padding-left: 25px;
   border: 1px solid $secondary-title-color;
   border-radius: 4px;
 }
 
-.contact__franchise-description {
+.franchise-modal__fee-list {
   list-style-type: none;
   text-align: center;
   margin-top: 10px;
   margin-left: 50px;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 166%;
-  color: #907e82;
-}
-
-.contact__franchise-submit-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: $accent-color;
-  border: none;
-  border-radius: 22px;
-  color: $primary-inverse-text-color;
-  height: 44px;
-  width: 115px;
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 21px;
-  text-align: center;
-  color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  // transition: background-color $default-transition-time
-  // $default-transition-function;
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-  }
+  @include modal-font-set($line-height: 24px, $text-align: center, $letter-spacing: 0.03em, $color: $secondary-text-color);
 }

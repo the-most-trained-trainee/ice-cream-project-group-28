@@ -24,9 +24,6 @@
       }
     }
   }
-  &__title {
-    display: none;
-  }
   &__list {
     @media screen and (min-width: $tablet) {
       & {

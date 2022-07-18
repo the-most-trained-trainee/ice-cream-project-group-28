@@ -90,7 +90,8 @@
       padding: 0 31px;
     }
   }
-  &__btn:hover .button{
+  &__btn:hover .button,
+  &__btn:focus .button {
     transform: rotateX(180deg);
     background-color: $secondary-title-color;
   }
@@ -98,7 +99,8 @@
     transform: rotateX(0);
     transition: transform $default-transition-time $default-transition-function;
   }
-  &__btn:hover &__btn-text {
+  &__btn:hover &__btn-text,
+  &__btn:focus &__btn-text {
     transform: rotateX(180deg);
   }
   &__btn:nth-child(2) .button {
@@ -110,7 +112,8 @@
         padding: 0 39px;
       }
   }
-  &__btn:nth-child(2):hover .button {
+  &__btn:nth-child(2):hover .button,
+  &__btn:nth-child(2):focus .button {
     transform: rotateX(180deg);
     background-color: $secondary-title-color;
   }

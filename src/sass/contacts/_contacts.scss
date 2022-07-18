@@ -52,7 +52,7 @@
       margin-bottom: 20px;
     }
   }
-  &__modal-btn {
+  &__btn-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,7 @@
       justify-content: center;
     }
   }
-  &__modal-btn>li:not(:last-child) {
+  &__btn-list>li:not(:last-child) {
     margin-bottom: 10px;
     @media screen and (min-width: $tablet) {
       & {
@@ -72,7 +72,7 @@
       }
     }
   }
-  &__modal-btn .button {
+  &__btn .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,28 +83,36 @@
     line-height: 1.3;
     color: $primary-inverse-text-color;
     background-color: $accent-color;
-    transition: background-color $default-transition-time $default-transition-function;
-    &:hover,
-    &:focus {
-      background-color: $secondary-title-color;
-    }
+    transform: rotateX(0);
+    transition: background-color $default-transition-time $default-transition-function, transform $default-transition-time $default-transition-function;
     @media screen and (min-width: $tablet) {
       width: auto;
       padding: 0 31px;
     }
   }
-  &__modal-btn>li:nth-child(2) .button {
+  &__btn:hover .button{
+    transform: rotateX(180deg);
+    background-color: $secondary-title-color;
+  }
+  &__btn-text {
+    transform: rotateX(0);
+    transition: transform $default-transition-time $default-transition-function;
+  }
+  &__btn:hover &__btn-text {
+    transform: rotateX(180deg);
+  }
+  &__btn:nth-child(2) .button {
     color: $accent-color;
     background-color: $primary-inverse-text-color;
-    transition: background-color $default-transition-time $default-transition-function;
-    &:hover,
-    &:focus {
-      background-color: $default-button-hover-bg-color;
-    }
+    transition: background-color $default-transition-time $default-transition-function, transform $default-transition-time $default-transition-function;
     @media screen and (min-width: $tablet) {
         width: auto;
         padding: 0 39px;
       }
+  }
+  &__btn:nth-child(2):hover .button {
+    transform: rotateX(180deg);
+    background-color: $secondary-title-color;
   }
   &__icon {
     fill: currentColor;

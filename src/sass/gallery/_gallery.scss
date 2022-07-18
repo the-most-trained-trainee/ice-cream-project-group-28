@@ -1,55 +1,80 @@
 .gallery {
-  background-image: linear-gradient(
-    to bottom,
-    $secondary-background-color 20%,
-    $primary-background-color 20%,
-    $primary-background-color 80%
-  );
-
+  @media screen and (max-width: 767.98px) {
+    background-image: linear-gradient(
+      to bottom,
+      $secondary-background-color 29%,
+      $primary-background-color 29%,
+      $primary-background-color 71%
+    );
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    background-image: linear-gradient(
+      to bottom,
+      $secondary-background-color 56%,
+      $primary-background-color 56%,
+      $primary-background-color 44%
+    );
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+      to bottom,
+      $secondary-background-color 29%,
+      $primary-background-color 29%,
+      $primary-background-color 71%
+    );
+  }
   .gallery__container {
+    @media screen and (max-width: 319.98px) {
+      width: 90vw;
+    }
     padding: 0;
     margin: 0 auto;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
       padding: 0 93px;
     }
   }
-  .gallery__list {
-    width: 100%;
-    max-width: 100vw;
+}
+.gallery__list {
+  width: 100%;
+  max-width: 100vw;
+  @media screen and (min-width: 320px) {
     display: grid;
-    gap: 5px;
-    @media screen and (min-width: 320px) {
-      column-gap: 0.6%;
-      row-gap: 1.8%;
-    }
-    grid-template-columns: repeat(minmax(44px, 1fr));
-    grid-template-rows: [start] minmax(44px, 1fr) [row2] minmax(44px, 1fr) [row-end] minmax(
-        44px,
-        1fr
-      );
-    background-color: transparent;
+    column-gap: 0.8%;
+    row-gap: 2%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: [start] 1fr [row2] 1fr [row-end] 1fr;
   }
-  .gallery__item {
-    position: relative;
-    height: auto;
-    padding: 0 0 99% 0;
-    border-radius: 17%;
-    @media screen and (min-width: 320px) {
-      box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
-      -webkit-box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
-      -moz-box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
-    }
-    &:nth-child(4) {
-      border-radius: 9%;
+}
+.gallery__item {
+  position: relative;
+  height: auto;
+  padding: 0 0 99% 0;
+  border-radius: 17%;
+  overflow: hidden;
+  @media screen and (max-width: 319.98px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
-  .gallery__item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &:nth-child(4) {
+    border-radius: 9%;
+  }
+  box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
+  -webkit-box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
+  -moz-box-shadow: 0px 12px 10px -1px rgba(0, 0, 0, 0.215);
+}
+.gallery__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 9;
+  transition: transform 2s cubic-bezier(0.52, 0.46, 0.48, 1.03);
+  &:hover,
+  &:focus {
+    transform: scale(1.2) rotate(10deg);
   }
 }
 @media screen and (min-width: 320px) {
@@ -58,10 +83,10 @@
   }
   .gallery__item:nth-child(2) {
     grid-row-start: row2;
-    transform: translateY(60%);
+    transform: translateY(64%);
   }
   .gallery__item:nth-child(3) {
-    transform: translateY(60%);
+    transform: translateY(64%);
     grid-column-start: 2;
   }
   .gallery__item:nth-child(4) {
@@ -73,10 +98,10 @@
     grid-column-start: 3;
   }
   .gallery__item:nth-child(6) {
-    transform: translateY(70%);
+    transform: translateY(71%);
   }
   .gallery__item:nth-child(7) {
-    transform: translateY(70%);
+    transform: translateY(71%);
     grid-row-start: row2;
     grid-column-start: 5;
   }

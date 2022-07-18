@@ -146,8 +146,10 @@
     justify-content: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    text-align: center;
     color: $primary-inverse-text-color;
+    @media screen and (min-width: $tablet) {
+      height: 28px;
+    }
     &--color {
       background-color: #C2E297;
     }

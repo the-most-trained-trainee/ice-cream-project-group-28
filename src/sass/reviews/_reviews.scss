@@ -39,7 +39,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: 0;
+    bottom: 12px;
 }
 
 // ФОТО АВАТАРА
@@ -59,8 +59,8 @@
         }
 
     @media screen and (min-width: $desktop) {
-            width: 220px;
-            height: 220px;
+            width: 200px;
+            height: 200px;
         }
 }
 
@@ -142,15 +142,15 @@
 
     line-height: 1.86;
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 65px;
 
     @media screen and (min-width: $tablet) {
-        margin-bottom: 88px;
+        margin-bottom: 96px;
     }
 
     @media screen and (min-width: $desktop) {
 
-        margin-bottom: 86px;
+        margin-bottom: 110px;
     }
 }
 
@@ -158,8 +158,8 @@
 .swiper-pagination-bullet {
     background-color: #c97c8e;
     opacity: 0.7;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-size: contain;
     background-position: center;
@@ -212,6 +212,11 @@
     background-image: url(../images/customer-reviews/reviews/bgi-oleg.png);
 }
 
+.swiper-pagination-bullet:nth-child(8) {
+
+    background-image: url(../images/customer-reviews/reviews/bgi-viktor.png);
+}
+
 
 
 .swiper-pagination-bullet-active {
@@ -254,7 +259,7 @@
 
 
 // Анімація
-.rotate-hor-center:hover {
+.socials__item:hover {
     animation: rotate-hor-center 0.5s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
 }
 

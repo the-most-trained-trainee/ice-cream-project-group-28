@@ -158,7 +158,7 @@
         padding-top: 118px;    
         padding-left: 32px;
         padding-right: 32px;
-        padding-bottom: 32px;
+        padding-bottom: 40px;
     }
 
     @media screen and (min-width:$desktop) {
@@ -201,9 +201,7 @@
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
 
-            .card__wrapper--ice::before {
-                background-image: url(../images/products/mobile/prod-cream-mob-x2.png);
-            }
+            background-image: url(../images/products/mobile/prod-cream-mob-x2.png);
     }
 
     @media screen and (min-width:$tablet) {
@@ -217,9 +215,7 @@
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
         
-                .card__wrapper--ice::before {
-                    background-image: url(../images/products/tablet/prod-cream-tab-x2.png);
-                }
+                background-image: url(../images/products/tablet/prod-cream-tab-x2.png);
             }
     }
 
@@ -233,13 +229,11 @@
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-                .card__wrapper--ice::before {
-                    background-image: url(../images/products/desktop/prod-cream-des-x2.png);
-                }
+                
+                background-image: url(../images/products/desktop/prod-cream-des-x2.png);
         }
     }
 }
-
 .card__wrapper--coffee::before {
     position: absolute;
     top: -140px;
@@ -257,9 +251,7 @@
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
     
-                .card__wrapper--coffee::before {
                 background-image: url(../images/products/mobile/prod-coffee-mob-x2.png);
-            }
         }
 
     @media screen and (min-width:$tablet) {
@@ -273,9 +265,7 @@
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
             
-                .card__wrapper--coffee::before {
-                        background-image: url(../images/products/tablet/prod-coffee-tab-x2.png);
-                    }
+                background-image: url(../images/products/tablet/prod-coffee-tab-x2.png);
             }
     }
 
@@ -289,9 +279,8 @@
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-                .card__wrapper--coffee::before {
-                    background-image: url(../images/products/desktop/prod-coffee-des-x2.png);
-            }
+                
+                background-image: url(../images/products/desktop/prod-coffee-des-x2.png);
         }
     }
 }
@@ -313,10 +302,9 @@
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
 
-            .card__wrapper--shakes::before {
-                background-image: url(../images/products/mobile/prod-shakes-mob-x2.png);
-            }
+            background-image: url(../images/products/mobile/prod-shakes-mob-x2.png);
     }
+
     @media screen and (min-width:$tablet) {
         width: 224px;
         height: 224px;
@@ -327,9 +315,7 @@
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
         
-                .card__wrapper--shakes::before {
-                    background-image: url(../images/products/tablet/prod-shakes-tab-x2.png);
-                }
+                background-image: url(../images/products/tablet/prod-shakes-tab-x2.png);
         }
     }
 
@@ -343,9 +329,8 @@
         @media screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx) {
-                .card__wrapper--shakes::before {
-                    background-image: url(../images/products/desktop/prod-shakes-des-x2.png);
-                }
+                
+                background-image: url(../images/products/desktop/prod-shakes-des-x2.png);
             }
     }
 }

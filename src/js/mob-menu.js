@@ -3,6 +3,8 @@
   const openMenuBtn = document.querySelector('.js-open');
   const closeMenuBtn = document.querySelector('.js-close');
 
+  const closeLinks = document.querySelectorAll('.link-close-menu'); // Chertok code
+
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -15,6 +17,10 @@
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+
+  closeLinks.forEach(link => { 
+    link.addEventListener('click', toggleMenu);
+  });
 
   
   // Close the mobile menu on wider screens if the device orientation changes

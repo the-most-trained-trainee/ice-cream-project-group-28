@@ -16,7 +16,10 @@
     padding-top: 160px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;  // Chertok comment
+
+    --card-padding-bottom: calc(40px + 40px); //padding + button-height  // Chertok code
+    padding-bottom: var(--card-padding-bottom); // Chertok code
 
     border-radius: 24px;
     text-align: center;
@@ -27,24 +30,29 @@
 
         padding-left: 32px;
         padding-right: 32px;
+
+
     }
-    
+
     @media screen and (min-width:$desktop) {
         flex-basis: calc((100% - 64px) / 3);
         padding-top: 165px;
 
         padding-left: 60px;
         padding-right: 60px;
+
+        --card-padding-bottom: calc(60px + 40px); //padding + button-height  // Chertok code
+        padding-bottom: var(--card-padding-bottom); // Chertok code
     }
 }
 
 .card__wrapper:not(:last-child) {
     @media screen and (max-width:$mobile-max) {
         margin-bottom: 140px;
-    } 
+    }
 }
 
-        //Pink
+//Pink
 
 .card__wrapper--ice {
     background-color: #FFB8CA;
@@ -102,7 +110,7 @@
 }
 
 
-        //Brown
+//Brown
 
 .card__wrapper--coffee {
     background-color: #F0D1A5;
@@ -160,7 +168,7 @@
 }
 
 
-        //Green
+//Green
 
 .card__wrapper--shakes {
     background-color: #C2E297;
@@ -199,6 +207,7 @@
             background-image: url(../images/products/tablet/prod-shakes-tab-x2.png);
         }
     }
+
     @media screen and (min-width:$desktop) {
         top: -261px;
         width: 368px;
@@ -217,6 +226,54 @@
 
 
 
+// Chertok code above
+
+.products__meta {
+    position: relative;
+    overflow: hidden;
+}
 
 
 
+.products__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // padding: 40px 20px 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translateX(-100%);
+
+    // background-color: teal;
+
+    transition: transform $default-transition-time $default-transition-function;
+
+    &--start {
+        transform: translateX(0);
+    }
+
+}
+
+
+
+.products__button {
+    position: absolute;
+    bottom: calc(var(--card-padding-bottom) - 40px); // padding - button-height 
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0);
+
+    transition: transform $default-transition-time $default-transition-function, background-color $default-transition-time $default-transition-function;
+
+    &.return-arrow {
+        transform: translateX(-50%) rotate(-180deg);
+        transition: transform $default-transition-time $default-transition-function, background-color $default-transition-time $default-transition-function;
+    }
+
+}

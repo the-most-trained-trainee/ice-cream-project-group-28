@@ -8,12 +8,13 @@
     line-height: 1.17;
     text-transform: uppercase;
     color: $secondary-title-color;
-    
+
     @media screen and (min-width:$tablet) {
         margin-bottom: 18px;
         font-size: 26px;
-        line-height: 1.15; 
+        line-height: 1.15;
     }
+
     @media screen and (min-width:$desktop) {
         margin-bottom: 16px;
         font-size: 30px;
@@ -38,6 +39,7 @@
         margin-bottom: 158px;
         font-size: 48px;
     }
+
     @media screen and (min-width:$desktop) {
         margin-bottom: 281px;
 
@@ -51,7 +53,7 @@
     position: relative;
 
     margin-bottom: 70px;
-    
+
     font-family: 'Titan One', 'cursive';
     font-style: normal;
     font-weight: 400;
@@ -79,13 +81,22 @@
     color: $primary-inverse-text-color;
 
     @media screen and (min-width:$desktop) {
-            margin-bottom: 60px;
-            font-size: 16px;
-            line-height: 1.75;
-        }
+        margin-bottom: 60px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+
+    // Chertok code
+    &--overflow-hidden {
+        overflow: hidden;
+        padding-bottom: 5px;
+    }
+
+    // Chertok code
 }
 
-            // Кнопка
+// Кнопка
 
 .button__arrow--products {
     color: $accent-color;
@@ -103,7 +114,7 @@
     background-color: $primary-background-color;
 }
 
-            // Псевдоэлемент точки
+// Псевдоэлемент точки
 
 .products__subtitle::after {
     content: '\22EF';

@@ -109,9 +109,8 @@
 
 
 .mob-menu-modal__heading {
-  color: $secondary-title-color;
+  @include modal-font-set($font-weight: 500, $font-size: 18px, $line-height: 18px, $text-align: center, $letter-spacing: 0.02em, $color: $secondary-title-color);
   margin-top: 5px;
-  text-align: center;
 }
 
 .mob-menu-modal__products-list {

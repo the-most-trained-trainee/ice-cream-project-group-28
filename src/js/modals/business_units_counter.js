@@ -27,7 +27,6 @@ const cafesIncrementor = async (countElement, maxNumber) => {
   
   cafesIncrementor(dataCafesCountContainer, cafesMaxCount)
     .then(() => { 
-      console.log(trucksMaxCount)
       cafesIncrementor(dataTrucksCountCountainer, trucksMaxCount)
     });
 })();

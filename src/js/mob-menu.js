@@ -18,9 +18,11 @@
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
 
+  //Chertok code
   closeLinks.forEach(link => { 
     link.addEventListener('click', toggleMenu);
   });
+  //Chertok code
 
   
   // Close the mobile menu on wider screens if the device orientation changes

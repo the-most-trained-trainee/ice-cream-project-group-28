@@ -3,6 +3,7 @@
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
+    headerModalBtn: document.querySelector('[data-header-model-open]'),
 
     // menu: document.querySelector(".backdrop-mob"),
     menu: document.querySelector('.header__menu--js'),
@@ -10,6 +11,7 @@
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.headerModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleMenu() {
@@ -18,12 +20,19 @@
   }
 
   function toggleModal() {
-    refs.modal.classList.toggle('mob-menu-modal__is-hidden');
+    refs.modal.classList.toggle('mob-menu__modal--is-hidden');
     if (refs.menu.classList.contains('is-open')) {
       toggleMenu();
     }
   }
 })();
+
+// Добавить data-header-model-open
+
+
+
+
+
 
 const productsCounterContainers = document.getElementsByClassName('stepper');
 

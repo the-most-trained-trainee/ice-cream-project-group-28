@@ -10,5 +10,10 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('about-modal__is-hidden');
+    document.body.classList.toggle('no-scroll');
   }
 })();
+
+// .no-scroll {
+//   overflow: hidden;
+// }

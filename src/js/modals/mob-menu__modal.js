@@ -21,6 +21,7 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('mob-menu__modal--is-hidden');
+    document.body.classList.toggle('no-scroll');
     if (refs.menu.classList.contains('is-open')) {
       toggleMenu();
     }

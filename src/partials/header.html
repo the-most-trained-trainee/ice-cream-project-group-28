@@ -1,16 +1,30 @@
 <header class="header">
   <div class="header__container container">
     <a class="header__logo-link" href="#hero">
-      <img src="./images/hero-header/logo.svg" alt="logo" class="header__logo" width="199" height="50" />
+      <img
+        src="./images/hero-header/logo.svg"
+        alt="logo"
+        class="header__logo"
+        width="199"
+        height="50"
+      />
     </a>
 
-    <button class="header__menu-btn-open button js-open" aria-label="Открыть мобильное меню" aria-expanded="true">
+    <button
+      class="header__menu-btn-open button js-open"
+      aria-label="Открыть мобильное меню"
+      aria-expanded="true"
+    >
       <svg class="header__menu-btn-icon-open" width="20" height="12">
         <use href="./images/icons.svg#icon-menu"></use>
       </svg>
     </button>
 
-    <button data-model-open class="header__tb-btn button button--with-hover" type="button">
+    <button
+      data-header-model-open
+      class="header__tb-btn button button--with-hover"
+      type="button"
+    >
       <span class="header__tb-text">Buy now</span>
       <svg class="header__tb-icon" width="15" height="20">
         <use href="./images/icons.svg#icon-arrow-common"></use>
@@ -19,13 +33,21 @@
 
     <div class="header__menu header__menu--js">
       <div class="header__menu-wrapper">
-        <button class="header__menu-close-btn button js-close" aria-label="Закрыть мобильное меню">
+        <button
+          class="header__menu-close-btn button js-close"
+          aria-label="Закрыть мобильное меню"
+        >
           <svg class="header__menu-close-btn-icon" width="14" height="14">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
 
-        <button data-modal-open class="header__buy-btn button button--with-hover" type="button">
+        <button
+          id="animated-button"
+          data-modal-open
+          class="header__buy-btn button button--with-hover"
+          type="button"
+        >
           <span class="header__buy-text">Buy now</span>
           <svg class="header__buy-icon" width="15" height="20">
             <use href="./images/icons.svg#icon-arrow-common"></use>

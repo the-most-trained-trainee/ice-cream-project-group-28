@@ -7,20 +7,20 @@
       </h1>
       <ul class="hero__ul">
         <li class="hero__list">
-          <button
-            type="button"
-            class="button hero__button button--color__cherry button--with-accent-hover"
+          <a
+            href="#products"
+            class="button link hero__button button--color__cherry button--with-accent-hover"
           >
-            Products
-          </button>
+            <span class="hero__button-text">Products</span>
+          </a>
         </li>
         <li class="hero__list">
-          <button
-            type="button"
-            class="button hero__button button--color__white button--with-hover"
+          <a
+            href="#about"
+            class="button link hero__button button--color__white button--with-hover"
           >
-            How it’s made?
-          </button>
+            <span class="hero__button-text">How it’s made?</span>
+          </a>
         </li>
       </ul>
       <div class="hero__text--wrap">
@@ -28,27 +28,33 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
         </p>
-        <button class="button hero__text-button" type="button">
-          <svg
-            class="icon hero__text-button--color__cherry"
-            width="18"
-            height="12"
-          >
+        <a
+          target="_blank"
+          href="https://www.youtube.com/watch?v=q27ltn0jtxQ"
+          class="button hero__text-button button--with-hover"
+          data-modal-milkvideo
+        >
+          <svg class="icon hero__icon hero__text-button--color__cherry">
             <use href="./images/icons.svg#icon-arrow-products"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
     <div class="count__wrap">
       <ul class="count__ul">
         <li class="count__list">
-          <p class="count__number">16</p>
+          <p class="count__number" id="cafes-count" data-cafes-count="16">0</p>
           <p class="count__text">cafes</p>
         </li>
         <li class="count__list">
-          <p class="count__number">23</p>
+          <p class="count__number" id="trucks-count" data-truck-count="23">0</p>
           <p class="count__text">food trucks</p>
         </li>
+        <div class="hover__text--wrap">
+          <p class="hover__text">
+            glory to <span class="hover__text--blue">ukraine!</span>
+          </p>
+        </div>
       </ul>
     </div>
   </div>

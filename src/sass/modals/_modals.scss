@@ -1,5 +1,4 @@
 // Font Mixin
-// 222
 
 @mixin modal-font-set($font-family: 'DM Sans', $font-weight: 500, $font-size: 14px, $line-height: 18px, $text-align: center, $letter-spacing: 0.03em, $color: $secondary-text-color) {
   font-family: $font-family;
@@ -39,6 +38,9 @@
   padding-top: 8px;
   outline: none;
   background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .modal-default-close-icon {
@@ -63,7 +65,8 @@
   &.mob-menu-modal__is-hidden,
   &.about-modal__is-hidden,
   &.locations-modal__is-hidden,
-  &.franchise-modal__is-hidden {
+  &.franchise-modal__is-hidden, 
+  &.hero-modal__is-hidden {
     opacity: 0;
     pointer-events: none;
   }
@@ -116,24 +119,40 @@
 }
 
 .mob-menu-modal__product-card {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 40%;
   background-color: rgba(255, 255, 255, 0.1);
   border: dotted 1px $secondary-title-color;
   padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   & > img {
-    width: 100%;
+    width: 80%;
     display: inline-block;
+    margin-bottom: 9px;
+  }
+   & > picture {
+    display: inline-block;
+    margin-bottom: 9px;
+    
   }
   & > h3 {
-    text-align: center;
-    color: $secondary-text-color;
+    @include modal-font-set($font-weight: 700, $font-size: 14px, $line-height: 18px, $text-align: center, $letter-spacing: 0.02em, $color: $secondary-text-color);
+    margin-bottom: 9px;
   }
 }
 
 // Stepper Styles
 
-.stepper {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  height: auto;
+}
+// mob-menu-modal__ 
+.mob-menu-modal__stepper {
   border: 1px solid $secondary-title-color;
   display: inline-block;
   overflow: visible;
@@ -145,8 +164,8 @@
   margin-bottom: 5px;
 }
 
-.stepper input {
-  width: 1.5em;
+.mob-menu-modal__stepper input {
+  width: 2em;
   height: 100%;
   text-align: center;
   border: 0;
@@ -154,22 +173,23 @@
   color: $primary-text-color;
 }
 
-.stepper button {
+.mob-menu-modal__stepper button {
   width: 1.4em;
   font-weight: 300;
   height: 100%;
   line-height: 0.1em;
   font-size: 1.4em;
-  padding: 0.2em !important;
+  padding: 0.2em;
   background: $secondary-background-color;
   color: $secondary-title-color;
   border: none;
 }
 
-.mob-menu__modal--stepper {
+.mob-menu-modal__stepper-container {
   display: flex;
   flex-direction: row;
 }
+
 
 // About / Read More Modal
 
@@ -194,12 +214,12 @@
   }
 }
 
-.about-modal__readmore-heading {
-  font-style: italic;
-  color: $primary-background-color;
-  margin-top: 20px;
-  text-align: center;
+.about-modal__header-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px dashed $secondary-title-color;
+  padding: 10px;
 }
 
 // Contacts / Locations Modal
@@ -317,7 +337,7 @@
   }
 }
 
-.franchise-modal__textarea {
+#franchise-modal__textarea {
   display: block;
   width: 100%;
   resize: none;

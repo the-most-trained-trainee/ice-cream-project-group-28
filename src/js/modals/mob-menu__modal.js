@@ -20,21 +20,15 @@
   }
 
   function toggleModal() {
-    refs.modal.classList.toggle('mob-menu__modal--is-hidden');
+    refs.modal.classList.toggle('mob-menu-modal__is-hidden');
+    document.body.classList.toggle('no-scroll');
     if (refs.menu.classList.contains('is-open')) {
       toggleMenu();
     }
   }
 })();
 
-// Добавить data-header-model-open
-
-
-
-
-
-
-const productsCounterContainers = document.getElementsByClassName('stepper');
+const productsCounterContainers = document.getElementsByClassName('mob-menu-modal__stepper');
 
 for (const productsCounterContainer of productsCounterContainers) {
   const [plusButton] =

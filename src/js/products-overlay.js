@@ -1,26 +1,39 @@
-const buttonsStart = document.querySelectorAll('[js-overlay-start]');
-const buttonsReturn = document.querySelectorAll('[js-overlay-return]');
+const startButtons = document.querySelectorAll('[js-overlay-start]');
+const returnButtons = document.querySelectorAll('[js-overlay-return]');
+const cards = document.querySelectorAll('.card__wrapper');
 
-buttonsStart.forEach(button => { 
-    button.addEventListener('click', overlayStart);
+cards.forEach(card => {
+    
+    let cardBgColor = getComputedStyle(card).backgroundColor ;
+    let overlay = card.querySelector('.products__overlay');
+    overlay.style.backgroundColor = cardBgColor;
 });
 
-function overlayStart() {
-    console.log('overlay starts');
-}
+startButtons.forEach(button => { 
+    button.addEventListener('click', function (event) { 
+        event.preventDefault;
+        let target = event.target;
+        
+        // console.log(target.closest('.card__wrapper').querySelector('.products__overlay'));
+        
+        let overlay = target.closest('.card__wrapper').querySelector('.products__overlay');
+        
+        overlay.classList.add('products__overlay--start');
+
+    });
+});
+
+returnButtons.forEach(button => { 
+    button.addEventListener('click', function (event) { 
+        event.preventDefault;
+        let target = event.target;
+        
+        // console.log(target.closest('.card__wrapper').querySelector('.products__overlay'));
+        let overlay = target.closest('.products__overlay');
+        
+        overlay.classList.remove('products__overlay--start');
+
+    });
+});
 
 
-
-// products.forEach(product => {
-//     product.onmouseover = () => {
-//         // button.classList.toggle('animate__bounce');
-//         button.classList.add('animate__animated', 'animate__swing');
-//         // button.classList.add('animate__swing');
-//     };
-
-//     product.onmouseout = () => {
-//         button.classList.remove('animate__animated', 'animate__swing');
-//         // button.classList.remove('animate__swing');
-//     };
-
-// });

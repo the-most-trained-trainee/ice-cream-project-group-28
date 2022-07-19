@@ -215,12 +215,12 @@
         background-image: url(../images/products/desktop/prod-shakes-des-x1.png);
         background-size: 368px 394px;
 
-        @media screen and (min-device-pixel-ratio: 2),
+       /* @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
 
             background-image: url(../images/products/desktop/prod-shakes-des-x2.png);
-        }
+        } */
     }
 }
 

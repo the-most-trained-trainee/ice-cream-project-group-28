@@ -1,4 +1,4 @@
-const products = document.querySelectorAll('.card');
+const products = document.querySelectorAll('.card__wrapper');
 const button = document.querySelector('#animated-button');
 
 

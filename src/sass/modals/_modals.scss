@@ -136,6 +136,12 @@
 
 // Stepper Styles
 
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  height: auto;
+}
+
 .stepper {
   border: 1px solid $secondary-title-color;
   display: inline-block;

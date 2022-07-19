@@ -1,7 +1,7 @@
 <!-- Header / Buy Now Modal -->
 
 <div class="modal-default-backdrop mob-menu-modal__is-hidden" data-modal>
-    <div class="modal-default-container">
+    <div class="mob-menu-modal modal-default-container">
         <button data-modal-close class="modal-default-close-button">
             <svg class="modal-default-close-icon">
                 <use href="./images/icons.svg#products-close-button"></use>
@@ -64,16 +64,38 @@
     </div>
 </div>
 
+<!-- Hero Video Modal  -->
+
+<!-- <div class="modal-default-backdrop hero-modal__is-hidden" hero-modal>
+    <div class="hero-modal modal-default-container">
+        <div class="hero-modal__header-part">
+            <img src="./images/hero-header/logo.svg" alt="logo" class="header__logo" width="199" height="50" />
+            <button hero-modal-close class="modal-default-close-button">
+                <svg class="modal-default-close-icon">
+                    <use href="./images/icons.svg#products-close-button"></use>
+                </svg>
+            </button>
+        </div>
+        <iframe id="hero-modal__video" width="560" height="315" src="https://www.youtube.com/embed/-8MPE74pq4w"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+</div> -->
+
+
 <!-- About / Read More Modal  -->
 
 <div class="modal-default-backdrop about-modal__is-hidden" about-modal>
-    <div class="modal-default-container about-modal">
-        <button about-modal-close class="modal-default-close-button">
-            <svg class="modal-default-close-icon">
-                <use href="./images/icons.svg#products-close-button"></use>
-            </svg>
-        </button>
-        <h2 class="about-modal__readmore-heading"></h2>
+    <div class="about-modal modal-default-container">
+        <div class="about-modal__header-part">
+            <img src="./images/hero-header/logo.svg" alt="logo" class="header__logo" width="199" height="50" />
+            <button about-modal-close class="modal-default-close-button">
+                <svg class="modal-default-close-icon">
+                    <use href="./images/icons.svg#products-close-button"></use>
+                </svg>
+            </button>
+        </div>
         <div class="about-modal__readmore-text">
             <h3>Pasteurisation</h3>
             <p>This technique heats milk to 72°C for no less than 15 seconds, then cooled immediately to destroy any
@@ -148,7 +170,7 @@
 <!-- Contacts / Locations Modal  -->
 
 <div class="modal-default-backdrop locations-modal__is-hidden" locations-modal>
-    <div class="modal-default-container">
+    <div class="locations-modal modal-default-container">
         <button locations-modal-close class="modal-default-close-button">
             <svg class="modal-default-close-icon">
                 <use href="./images/icons.svg#products-close-button"></use>
@@ -192,7 +214,7 @@
 <!-- Contacts / Franchise Modal  -->
 
 <div class="modal-default-backdrop franchise-modal__is-hidden" franchise-modal>
-    <div class="modal-default-container">
+    <div class="franchise-modal modal-default-container">
         <button franchise-modal-close class="modal-default-close-button">
             <svg class="modal-default-close-icon">
                 <use href="./images/icons.svg#products-close-button"></use>
@@ -212,7 +234,7 @@
             <h4 class="franchise-modal__form-heading">Let's get in touch:</h4>
             <ul class="franchise-modal__form-field-list">
                 <li class="franchise-modal__form-field">
-                    <label for="name">Name</label>
+                    <label for="franchise-modal__form-name">Name</label>
                     <div class="franchise-modal__field-container">
                         <svg class="franchise-modal__field-icon">
                             <use href="./images/icons.svg#form-name"></use>
@@ -221,7 +243,7 @@
                     </div>
                 </li>
                 <li class="franchise-modal__form-field">
-                    <label for="tel">Phone</label>
+                    <label for="franchise-modal__form-tel">Phone</label>
                     <div class="franchise-modal__field-container">
                         <svg class="franchise-modal__field-icon">
                             <use href="./images/icons.svg#form-phone"></use>
@@ -230,7 +252,7 @@
                     </div>
                 </li>
                 <li class="franchise-modal__form-field">
-                    <label for="mail">Email</label>
+                    <label for="franchise-modal__form-mail">Email</label>
                     <div class="franchise-modal__field-container">
                         <svg class="franchise-modal__field-icon">
                             <use href="./images/icons.svg#form-email"></use>
@@ -239,8 +261,8 @@
                     </div>
                 </li>
                 <li class="franchise-modal__form-field">
-                    <label for="comment">Comment</label>
-                    <textarea name="comment" id="comment" cols="15" rows="2" class="franchise-modal__textarea"
+                    <label for="franchise-modal__textarea">Comment</label>
+                    <textarea name="comment" id="franchise-modal__textarea" cols="15" rows="2"
                         placeholder="Leave your comment here"></textarea>
                 </li>
             </ul>

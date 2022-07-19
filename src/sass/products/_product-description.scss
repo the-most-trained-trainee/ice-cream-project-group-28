@@ -16,7 +16,10 @@
     padding-top: 160px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 40px;
+    // padding-bottom: 40px;  // Chertok comment
+
+    --card-padding-bottom: calc(40px + 40px); //padding + button-height  // Chertok code
+    padding-bottom: var(--card-padding-bottom); // Chertok code
 
     border-radius: 24px;
     text-align: center;
@@ -27,6 +30,8 @@
 
         padding-left: 32px;
         padding-right: 32px;
+
+
     }
 
     @media screen and (min-width:$desktop) {
@@ -35,6 +40,9 @@
 
         padding-left: 60px;
         padding-right: 60px;
+
+        --card-padding-bottom: calc(60px + 40px); //padding + button-height  // Chertok code
+        padding-bottom: var(--card-padding-bottom); // Chertok code
     }
 }
 
@@ -218,10 +226,14 @@
 
 
 
+// Chertok code above
+
 .products__meta {
     position: relative;
     overflow: hidden;
 }
+
+
 
 .products__overlay {
     position: absolute;
@@ -242,10 +254,26 @@
 
     transition: transform $default-transition-time $default-transition-function;
 
-
-
     &--start {
         transform: translateX(0);
+    }
+
+}
+
+
+
+.products__button {
+    position: absolute;
+    bottom: calc(var(--card-padding-bottom) - 40px); // padding - button-height 
+    left: 50%;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(0);
+
+    transition: transform $default-transition-time $default-transition-function, background-color $default-transition-time $default-transition-function;
+
+    &.return-arrow {
+        transform: translateX(-50%) rotate(-180deg);
+        transition: transform $default-transition-time $default-transition-function, background-color $default-transition-time $default-transition-function;
     }
 
 }

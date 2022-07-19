@@ -459,8 +459,8 @@
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #f4ff00;
-
+  color: #0104d8;
+  text-shadow: 2px 2px 3px #f4ff00;
   @media screen and (min-width: $desktop) {
     width: 140px;
     height: 60px;
@@ -470,6 +470,7 @@
     font-size: 26px;
   }
 }
-.hero__hover-blue {
-  color: #0104d8;
+.hero__hover-yellow {
+  color: #f4ff00;
+  text-shadow: 2px 2px 3px #0104d8;
 }

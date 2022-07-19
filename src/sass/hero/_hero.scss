@@ -448,6 +448,7 @@
 }
 .hover__text {
   display: none;
+
   font-family: 'Titan One', 'cursive';
   background-color: $primary-inverse-text-color;
   width: 85px;
@@ -461,6 +462,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #f4ff00;
+
   @media screen and (min-width: $desktop) {
     width: 140px;
     height: 60px;

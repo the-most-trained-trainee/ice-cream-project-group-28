@@ -1,357 +1,461 @@
 <!-- Header / Buy Now Modal -->
 
 <div class="modal-default-backdrop mob-menu-modal__is-hidden" data-modal>
-    <div class="mob-menu-modal modal-default-container">
-        <button data-modal-close class="modal-default-close-button">
-            <svg class="modal-default-close-icon">
-                <use href="./images/icons.svg#products-close-button"></use>
-            </svg>
-        </button>
-        <h2 class="mob-menu-modal__heading">Choose the icecream you like:</h2>
-        <ul class="mob-menu-modal__products-list">
-            <li class="mob-menu-modal__product-card">
-                <h3>Ice Coffee</h3>
-                <picture>
-                    <source srcset="
-                                      ./images/gallery/mobile/WpcMb-9.webp      44w,
-                                      ./images/gallery/mobile/WpcMb2x-9.webp    88w,
-                                      ./images/gallery/tablet/WpcTb-9.webp     105w,
-                                      ./images/gallery/desktop/WpcDsk-9.webp   138w,
-                                      ./images/gallery/tablet/WpcTb2x-9.webp   210w,
-                                      ./images/gallery/desktop/WpcDsk2x-9.webp 276w,
-                                      ./images/gallery/tablet/WpcTb3x-9.webp   314w,
-                                      ./images/gallery/desktop/WpcDsk3x-9.webp 414w
-                                    " type="image/webp"
-                        sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw" />
+  <div class="mob-menu-modal modal-default-container">
+    <button
+      data-modal-close
+      class="modal-default-close-button"
+      aria-label="Close Button"
+    >
+      <svg class="modal-default-close-icon">
+        <use href="./images/icons.svg#products-close-button"></use>
+      </svg>
+    </button>
+    <h2 class="mob-menu-modal__heading">Choose the icecream you like:</h2>
+    <ul class="mob-menu-modal__products-list">
+      <li class="mob-menu-modal__product-card">
+        <h3>Ice Coffee</h3>
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mobile/WpcMb-9.webp      44w,
+              ./images/gallery/mobile/WpcMb2x-9.webp    88w,
+              ./images/gallery/tablet/WpcTb-9.webp     105w,
+              ./images/gallery/desktop/WpcDsk-9.webp   138w,
+              ./images/gallery/tablet/WpcTb2x-9.webp   210w,
+              ./images/gallery/desktop/WpcDsk2x-9.webp 276w,
+              ./images/gallery/tablet/WpcTb3x-9.webp   314w,
+              ./images/gallery/desktop/WpcDsk3x-9.webp 414w
+            "
+            type="image/webp"
+            sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw"
+          />
 
-                    <img srcset="
-                                      ./images/gallery/mobile/gall-nine-koffee-mob-x1.png   44w,
-                                      ./images/gallery/mobile/gall-nine-koffee-mob-x2.png   88w,
-                                      ./images/gallery/tablet/gall-nine-koffee-tab-x1.png  105w,
-                                      ./images/gallery/tablet/gall-nine-koffee-tab-x2.png  210w,
-                                      ./images/gallery/desktop/gall-nine-koffee-des-x1.png 138w,
-                                      ./images/gallery/desktop/gall-nine-koffee-des-x2.png 276w,
-                                      ./images/gallery/tablet/pcTb3x-9.png                 314w,
-                                      ./images/gallery/desktop/pcDsk3x-9.png               414w
-                                    " src="./images/gallery/desktop/gall-nine-koffee-des-x1.png" alt="ice cream"
-                        width="108"
-                        sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw" />
-                </picture>
-                <div class="mob-menu-modal__stepper-container">
-                    <span class="mob-menu-modal__stepper">
-                        <button class="minus-button">–</button>
-                        <input class="products-counter" type="number" value="0" min="0" max="100" step="1" readonly>
-                        <button class="plus-button">+</button>
-                    </span>
-                </div>
-            </li>
-            <li class="mob-menu-modal__product-card">
-                <h3>Strawberry</h3>
-                <picture>
-                    <source srcset="
-                                      ./images/gallery/mobile/WpcMb-7.webp      44w,
-                                      ./images/gallery/mobile/WpcMb2x-7.webp    88w,
-                                      ./images/gallery/tablet/WpcTb-7.webp     105w,
-                                      ./images/gallery/desktop/WpcDsk-7.webp   138w,
-                                      ./images/gallery/tablet/WpcTb2x-7.webp   210w,
-                                      ./images/gallery/desktop/WpcDsk2x-7.webp 276w,
-                                      ./images/gallery/tablet/WpcTb3x-7.webp   314w,
-                                      ./images/gallery/desktop/WpcDsk3x-7.webp 414w
-                                    " type="image/webp"
-                        sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw" />
+          <img
+            srcset="
+              ./images/gallery/mobile/gall-nine-koffee-mob-x1.png   44w,
+              ./images/gallery/mobile/gall-nine-koffee-mob-x2.png   88w,
+              ./images/gallery/tablet/gall-nine-koffee-tab-x1.png  105w,
+              ./images/gallery/tablet/gall-nine-koffee-tab-x2.png  210w,
+              ./images/gallery/desktop/gall-nine-koffee-des-x1.png 138w,
+              ./images/gallery/desktop/gall-nine-koffee-des-x2.png 276w,
+              ./images/gallery/tablet/pcTb3x-9.png                 314w,
+              ./images/gallery/desktop/pcDsk3x-9.png               414w
+            "
+            src="./images/gallery/desktop/gall-nine-koffee-des-x1.png"
+            alt="ice cream"
+            width="108"
+            sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw"
+          />
+        </picture>
+        <div class="mob-menu-modal__stepper-container">
+          <span class="mob-menu-modal__stepper">
+            <button class="minus-button" aria-label="Decrease button">–</button>
+            <input
+              class="products-counter"
+              type="number"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+              readonly
+            />
+            <button class="plus-button" aria-label="Increase button">+</button>
+          </span>
+        </div>
+      </li>
+      <li class="mob-menu-modal__product-card">
+        <h3>Strawberry</h3>
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mobile/WpcMb-7.webp      44w,
+              ./images/gallery/mobile/WpcMb2x-7.webp    88w,
+              ./images/gallery/tablet/WpcTb-7.webp     105w,
+              ./images/gallery/desktop/WpcDsk-7.webp   138w,
+              ./images/gallery/tablet/WpcTb2x-7.webp   210w,
+              ./images/gallery/desktop/WpcDsk2x-7.webp 276w,
+              ./images/gallery/tablet/WpcTb3x-7.webp   314w,
+              ./images/gallery/desktop/WpcDsk3x-7.webp 414w
+            "
+            type="image/webp"
+            sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw"
+          />
 
-                    <img srcset="
-                                      ./images/gallery/mobile/gall-seven-icehand-mob-x1.png   44w,
-                                      ./images/gallery/mobile/gall-seven-icehand-mob-x2.png   88w,
-                                      ./images/gallery/tablet/gall-seven-icehand-tab-x1.png  105w,
-                                      ./images/gallery/tablet/gall-seven-icehand-tab-x2.png  210w,
-                                      ./images/gallery/desktop/gall-seven-icehand-des-x1.png 138w,
-                                      ./images/gallery/desktop/gall-seven-icehand-des-x2.png 276w,
-                                      ./images/gallery/tablet/pcTb3x-7.png                   314w,
-                                      ./images/gallery/desktop/pcDsk3x-7.png                 414w
-                                    " src="./images/gallery/desktop/gall-seven-icehand-des-x1.png" alt="ice cream"
-                        width="108"
-                        sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw" />
-                </picture>
+          <img
+            srcset="
+              ./images/gallery/mobile/gall-seven-icehand-mob-x1.png   44w,
+              ./images/gallery/mobile/gall-seven-icehand-mob-x2.png   88w,
+              ./images/gallery/tablet/gall-seven-icehand-tab-x1.png  105w,
+              ./images/gallery/tablet/gall-seven-icehand-tab-x2.png  210w,
+              ./images/gallery/desktop/gall-seven-icehand-des-x1.png 138w,
+              ./images/gallery/desktop/gall-seven-icehand-des-x2.png 276w,
+              ./images/gallery/tablet/pcTb3x-7.png                   314w,
+              ./images/gallery/desktop/pcDsk3x-7.png                 414w
+            "
+            src="./images/gallery/desktop/gall-seven-icehand-des-x1.png"
+            alt="ice cream"
+            width="108"
+            sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw"
+          />
+        </picture>
 
-                <div class="mob-menu-modal__stepper-container">
-                    <span class="mob-menu-modal__stepper">
-                        <button class="minus-button">–</button>
-                        <input class="products-counter" type="number" value="0" min="0" max="100" step="1" readonly>
-                        <button class="plus-button">+</button>
-                    </span>
-                </div>
-            </li>
-            <li class="mob-menu-modal__product-card">
-                <h3>Raspberry</h3>
-                <picture>
-                    <source srcset="
-                                      ./images/gallery/mobile/WpcMb-2.webp      44w,
-                                      ./images/gallery/mobile/WpcMb2x-2.webp    88w,
-                                      ./images/gallery/tablet/WpcTb-2.webp     105w,
-                                      ./images/gallery/desktop/WpcDsk-2.webp   138w,
-                                      ./images/gallery/tablet/WpcTb2x-2.webp   210w,
-                                      ./images/gallery/desktop/WpcDsk2x-2.webp 276w,
-                                      ./images/gallery/tablet/WpcTb3x-2.webp   314w,
-                                      ./images/gallery/desktop/WpcDsk3x-2.webp 414w
-                                    " type="image/webp"
-                        sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw" />
+        <div class="mob-menu-modal__stepper-container">
+          <span class="mob-menu-modal__stepper">
+            <button class="minus-button" aria-label="Decrease button">–</button>
+            <input
+              class="products-counter"
+              type="number"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+              readonly
+            />
+            <button class="plus-button" aria-label="Increase button">+</button>
+          </span>
+        </div>
+      </li>
+      <li class="mob-menu-modal__product-card">
+        <h3>Raspberry</h3>
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mobile/WpcMb-2.webp      44w,
+              ./images/gallery/mobile/WpcMb2x-2.webp    88w,
+              ./images/gallery/tablet/WpcTb-2.webp     105w,
+              ./images/gallery/desktop/WpcDsk-2.webp   138w,
+              ./images/gallery/tablet/WpcTb2x-2.webp   210w,
+              ./images/gallery/desktop/WpcDsk2x-2.webp 276w,
+              ./images/gallery/tablet/WpcTb3x-2.webp   314w,
+              ./images/gallery/desktop/WpcDsk3x-2.webp 414w
+            "
+            type="image/webp"
+            sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw"
+          />
 
-                    <img srcset="
-                                      ./images/gallery/mobile/gall-three-icelolly-mob-x1.png   44w,
-                                      ./images/gallery/mobile/gall-three-icelolly-mob-x2.png   88w,
-                                      ./images/gallery/tablet/gall-three-icelolly-tab-x1.png  105w,
-                                      ./images/gallery/desktop/gall-three-icelolly-des-x1.png 138w,
-                                      ./images/gallery/tablet/gall-three-icelolly-tab-x2.png  210w,
-                                      ./images/gallery/desktop/gall-three-icelolly-des-x2.png 276w,
-                                      ./images/gallery/tablet/pcTb3x-2.png                    314w,
-                                      ./images/gallery/desktop/pcDsk3x-2.png                  414w
-                                    " src="./images/gallery/desktop/gall-three-icelolly-des-x1.png"
-                        alt="three-icelolly" width="108"
-                        sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw" />
-                </picture>
-                <div class="mob-menu-modal__stepper-container">
-                    <span class="mob-menu-modal__stepper">
-                        <button class="minus-button">–</button>
-                        <input type="number" class="products-counter" value="0" min="0" max="100" step="1" readonly>
-                        <button class="plus-button">+</button>
-                    </span>
-                </div>
-            </li>
-            <li class="mob-menu-modal__product-card">
-                <h3>Banana Mix</h3>
-                <picture>
-                    <source srcset="
-                                      ./images/gallery/mobile/WpcMb-3.webp      44w,
-                                      ./images/gallery/mobile/WpcMb2x-3.webp    88w,
-                                      ./images/gallery/tablet/WpcTb-3.webp     105w,
-                                      ./images/gallery/desktop/WpcDsk-3.webp   138w,
-                                      ./images/gallery/tablet/WpcTb2x-3.webp   210w,
-                                      ./images/gallery/desktop/WpcDsk2x-3.webp 276w,
-                                      ./images/gallery/tablet/WpcTb3x-3.webp   314w,
-                                      ./images/gallery/desktop/WpcDsk3x-3.webp 414w
-                                    " type="image/webp"
-                        sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw" />
+          <img
+            srcset="
+              ./images/gallery/mobile/gall-three-icelolly-mob-x1.png   44w,
+              ./images/gallery/mobile/gall-three-icelolly-mob-x2.png   88w,
+              ./images/gallery/tablet/gall-three-icelolly-tab-x1.png  105w,
+              ./images/gallery/desktop/gall-three-icelolly-des-x1.png 138w,
+              ./images/gallery/tablet/gall-three-icelolly-tab-x2.png  210w,
+              ./images/gallery/desktop/gall-three-icelolly-des-x2.png 276w,
+              ./images/gallery/tablet/pcTb3x-2.png                    314w,
+              ./images/gallery/desktop/pcDsk3x-2.png                  414w
+            "
+            src="./images/gallery/desktop/gall-three-icelolly-des-x1.png"
+            alt="three-icelolly"
+            width="108"
+            sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw"
+          />
+        </picture>
+        <div class="mob-menu-modal__stepper-container">
+          <span class="mob-menu-modal__stepper">
+            <button class="minus-button" aria-label="Decrease button">–</button>
+            <input
+              type="number"
+              class="products-counter"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+              readonly
+            />
+            <button class="plus-button" aria-label="Increase button">+</button>
+          </span>
+        </div>
+      </li>
+      <li class="mob-menu-modal__product-card">
+        <h3>Banana Mix</h3>
+        <picture>
+          <source
+            srcset="
+              ./images/gallery/mobile/WpcMb-3.webp      44w,
+              ./images/gallery/mobile/WpcMb2x-3.webp    88w,
+              ./images/gallery/tablet/WpcTb-3.webp     105w,
+              ./images/gallery/desktop/WpcDsk-3.webp   138w,
+              ./images/gallery/tablet/WpcTb2x-3.webp   210w,
+              ./images/gallery/desktop/WpcDsk2x-3.webp 276w,
+              ./images/gallery/tablet/WpcTb3x-3.webp   314w,
+              ./images/gallery/desktop/WpcDsk3x-3.webp 414w
+            "
+            type="image/webp"
+            sizes="(min-width: 1200px) 25vw, (min-width: 320px) 28vw, (max-width: 319px) 90vw"
+          />
 
-                    <img srcset="
-                                      ./images/gallery/mobile/gall-two-ice-mob-x1.png   44w,
-                                      ./images/gallery/mobile/gall-two-ice-mob-x2.png   88w,
-                                      ./images/gallery/tablet/gall-two-ice-tab-x1.png  105w,
-                                      ./images/gallery/desktop/gall-two-ice-des-x1.png 138w,
-                                      ./images/gallery/tablet/gall-two-ice-tab-x2.png  210w,
-                                      ./images/gallery/desktop/gall-two-ice-des-x2.png 276w,
-                                      ./images/gallery/tablet/pcTb3x-3.png             314w,
-                                      ./images/gallery/desktop/pcDsk3x-3.png           414w
-                                    " src="./images/gallery/desktop/gall-two-ice-des-x1.png" alt="ice cream"
-                        width="108"
-                        sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw" />
-                </picture>
-                <div class="mob-menu-modal__stepper-container">
-                    <span class="mob-menu-modal__stepper">
-                        <button class="minus-button">–</button>
-                        <input type="number" class="products-counter" value="0" min="0" max="100" step="1" readonly>
-                        <button class="plus-button">+</button>
-                    </span>
-                </div>
-            </li>
-        </ul>
-        <button type="submit" class="modal-default-submit-button">
-            Proceed
-            <svg width="15" height="20">
-                <use href="./images/icons.svg#icon-arrow-common"></use>
-            </svg>
-        </button>
-    </div>
+          <img
+            srcset="
+              ./images/gallery/mobile/gall-two-ice-mob-x1.png   44w,
+              ./images/gallery/mobile/gall-two-ice-mob-x2.png   88w,
+              ./images/gallery/tablet/gall-two-ice-tab-x1.png  105w,
+              ./images/gallery/desktop/gall-two-ice-des-x1.png 138w,
+              ./images/gallery/tablet/gall-two-ice-tab-x2.png  210w,
+              ./images/gallery/desktop/gall-two-ice-des-x2.png 276w,
+              ./images/gallery/tablet/pcTb3x-3.png             314w,
+              ./images/gallery/desktop/pcDsk3x-3.png           414w
+            "
+            src="./images/gallery/desktop/gall-two-ice-des-x1.png"
+            alt="ice cream"
+            width="108"
+            sizes="(min-width: 1200px) 12vw, (min-width: 320px) 14vw, (max-width: 319px) 90vw"
+          />
+        </picture>
+        <div class="mob-menu-modal__stepper-container">
+          <span class="mob-menu-modal__stepper">
+            <button class="minus-button" aria-label="Decrease button">–</button>
+            <input
+              type="number"
+              class="products-counter"
+              value="0"
+              min="0"
+              max="100"
+              step="1"
+              readonly
+            />
+            <button class="plus-button" aria-label="Increase button">+</button>
+          </span>
+        </div>
+      </li>
+    </ul>
+    <button
+      type="submit"
+      class="modal-default-submit-button"
+      aria-label="Submit button"
+    >
+      Proceed
+      <svg width="15" height="20">
+        <use href="./images/icons.svg#icon-arrow-common"></use>
+      </svg>
+    </button>
+  </div>
 </div>
 
 <!-- About / Read More Modal  -->
 
 <div class="modal-default-backdrop about-modal__is-hidden" data-about-modal>
-    <div class="about-modal modal-default-container">
-        <div class="about-modal__header-part">
-            <img src="./images/hero-header/logo.svg" alt="logo" class="header__logo" width="199" height="50" />
-            <button data-about-modal-close class="modal-default-close-button">
-                <svg class="modal-default-close-icon">
-                    <use href="./images/icons.svg#products-close-button"></use>
-                </svg>
-            </button>
-        </div>
-        <div class="about-modal__readmore-text">
-            <h3>Pasteurisation</h3>
-            <p>This technique heats milk to 72°C for no less than 15 seconds, then cooled immediately to destroy any
-                harmful bacteria
-                and micro-organisms. This also extends the shelf life.</p>
-            <h3>Homogenisation</h3>
-            <p>
-                Milk is put under pressure through fine nozzles, which evenly disperses fat globules. This stops the
-                cream
-                separating and rising to the top, allowing a more consistent texture and taste. Some manufacturers
-                produce
-                unhomogenised milk for people who prefer the cream to separate and rise to the top of the bottle.
-
-                Today's farm technology, cattle management and factory methods allow for greater consistency of milk,
-                and
-                milk composition can be adjusted for year-round consistency. Milk composition is standardised so
-                elements
-                like fat content are made consistent no matter the season or breed of cow the milk comes from.
-
-                The composition of milk is governed by the Food Standards Australia New Zealand Food Standards Code.
-                These
-                standards are consistent with international standards – milk consumed in nearly all developed countries
-                will
-                have very similar standards. The Code allows manufacturers to add or withdraw milk components to
-                standardise
-                the composition of milk sourced from dairy farms, as required, to produce nutritionally consistent and
-                safe
-                products. Under the Code, the standard for packaged full-fat milk requires that it contain at least 3.2%
-                of
-                fat and 3.0% of protein.
-            </p>
-            <h3>Ultrafiltration</h3>
-            <p>
-                This moves milk across a membrane under moderate pressure, which holds back protein, fat globules, and a
-                large amount of
-                calcium complexes.
-
-                Water and lactose (the sugar in milk) pass through, leaving behind a very protein and calcium-rich
-                product.
-                The fat
-                content can be adjusted to suit consumer preference.
-            </p>
-            <h3>Permeate</h3>
-            <p>
-                In order to standardise milk year-round, some manufacturers use a process called ultrafiltration where a
-                membrane filter
-                separates certain elements from milk (just like in the descriptions above). Milk is passed through a
-                very
-                fine filter,
-                and the lactose (milk sugar), vitamins and minerals that filter through are referred to as "permeate".
-
-                Permeate is a technical term which applies to all membrane filtration processes used across food
-                production
-                and other
-                industries. For example, when producing apple juice the fruit is put through a similar filtration
-                process
-                where permeate
-                is the clear juice we end up buying and consuming.
-
-                In milk processing, the word "permeate" does not refer to anything added which was not already part of
-                milk.
-
-                That filter helps milk producers make milk with consistent properties, which helps it conform to the
-                Food
-                Standards
-                Australia New Zealand Food Standards Code.
-            </p>
-        </div>
+  <div class="about-modal modal-default-container">
+    <div class="about-modal__header-part">
+      <img
+        src="./images/hero-header/logo.svg"
+        alt="logo"
+        class="header__logo"
+        width="199"
+        height="50"
+      />
+      <button
+        data-about-modal-close
+        class="modal-default-close-button"
+        aria-label="Close Button"
+      >
+        <svg class="modal-default-close-icon">
+          <use href="./images/icons.svg#products-close-button"></use>
+        </svg>
+      </button>
     </div>
+    <div class="about-modal__readmore-text">
+      <h3>Pasteurisation</h3>
+      <p>
+        This technique heats milk to 72°C for no less than 15 seconds, then
+        cooled immediately to destroy any harmful bacteria and micro-organisms.
+        This also extends the shelf life.
+      </p>
+      <h3>Homogenisation</h3>
+      <p>
+        Milk is put under pressure through fine nozzles, which evenly disperses
+        fat globules. This stops the cream separating and rising to the top,
+        allowing a more consistent texture and taste. Some manufacturers produce
+        unhomogenised milk for people who prefer the cream to separate and rise
+        to the top of the bottle. Today's farm technology, cattle management and
+        factory methods allow for greater consistency of milk, and milk
+        composition can be adjusted for year-round consistency. Milk composition
+        is standardised so elements like fat content are made consistent no
+        matter the season or breed of cow the milk comes from. The composition
+        of milk is governed by the Food Standards Australia New Zealand Food
+        Standards Code. These standards are consistent with international
+        standards – milk consumed in nearly all developed countries will have
+        very similar standards. The Code allows manufacturers to add or withdraw
+        milk components to standardise the composition of milk sourced from
+        dairy farms, as required, to produce nutritionally consistent and safe
+        products. Under the Code, the standard for packaged full-fat milk
+        requires that it contain at least 3.2% of fat and 3.0% of protein.
+      </p>
+      <h3>Ultrafiltration</h3>
+      <p>
+        This moves milk across a membrane under moderate pressure, which holds
+        back protein, fat globules, and a large amount of calcium complexes.
+        Water and lactose (the sugar in milk) pass through, leaving behind a
+        very protein and calcium-rich product. The fat content can be adjusted
+        to suit consumer preference.
+      </p>
+      <h3>Permeate</h3>
+      <p>
+        In order to standardise milk year-round, some manufacturers use a
+        process called ultrafiltration where a membrane filter separates certain
+        elements from milk (just like in the descriptions above). Milk is passed
+        through a very fine filter, and the lactose (milk sugar), vitamins and
+        minerals that filter through are referred to as "permeate". Permeate is
+        a technical term which applies to all membrane filtration processes used
+        across food production and other industries. For example, when producing
+        apple juice the fruit is put through a similar filtration process where
+        permeate is the clear juice we end up buying and consuming. In milk
+        processing, the word "permeate" does not refer to anything added which
+        was not already part of milk. That filter helps milk producers make milk
+        with consistent properties, which helps it conform to the Food Standards
+        Australia New Zealand Food Standards Code.
+      </p>
+    </div>
+  </div>
 </div>
 
 <!-- Contacts / Locations Modal  -->
 
-<div class="modal-default-backdrop locations-modal__is-hidden" data-locations-modal>
-    <div class="locations-modal modal-default-container">
-        <button data-locations-modal-close class="modal-default-close-button">
-            <svg class="modal-default-close-icon">
-                <use href="./images/icons.svg#products-close-button"></use>
-            </svg>
-        </button>
-        <h2 class="locations-modal__heading">Our locations</h2>
-        <ul class="locations-modal__address-list">
-            <li class="locations-modal__address-card">
-                <h3 class="locations-modal__sub-heading">New York</h3>
-                <h4 class="locations-modal__sale-place">Manhattan Mall</h4>
-                <span class="locations-modal__sale-address">100 W 33rd St, New York, NY 10001, US</span>
-                <a class="locations-modal__sale-address-link" href="https://goo.gl/maps/FP3681EWaUSJPdXm6">how to
-                    find</a>
-            </li>
-            <li class="locations-modal__address-card">
-                <h3 class="locations-modal__sub-heading">London</h3>
-                <h4 class="locations-modal__sale-place">Covent Garden</h4>
-                <span class="locations-modal__sale-address">14 James St, London WC2E 8BU, UK</span>
-                <a class="locations-modal__sale-address-link" href="https://g.page/covent-garden-london?share">how to
-                    find</a>
-            </li>
-            <li class="locations-modal__address-card">
-                <h3 class="locations-modal__sub-heading">Berlin</h3>
-                <h4 class="locations-modal__sale-place">Mercedes Platz</h4>
-                <span class="locations-modal__sale-address">Mühlenstraße 5, 10243 Berlin, Germany</span>
-                <a class="locations-modal__sale-address-link" href="https://goo.gl/maps/5JnRTD1Htr5awVuFA"
-                    target="_blank">how
-                    to find</a>
-            </li>
-            <li class="locations-modal__address-card">
-                <h3 class="locations-modal__sub-heading">Paris</h3>
-                <h4 class="locations-modal__sale-place">Galerie Vivienne</h4>
-                <span class="locations-modal__sale-address">5 Rue de la Banque, 75002 Paris, France</span>
-                <a class="locations-modal__sale-address-link" href="https://goo.gl/maps/GhdxaN1eFPjk9Q5ZA">how to
-                    find</a>
-            </li>
-        </ul>
-    </div>
+<div
+  class="modal-default-backdrop locations-modal__is-hidden"
+  data-locations-modal
+>
+  <div class="locations-modal modal-default-container">
+    <button
+      data-locations-modal-close
+      class="modal-default-close-button"
+      aria-label="Close Button"
+    >
+      <svg class="modal-default-close-icon">
+        <use href="./images/icons.svg#products-close-button"></use>
+      </svg>
+    </button>
+    <h2 class="locations-modal__heading">Our locations</h2>
+    <ul class="locations-modal__address-list">
+      <li class="locations-modal__address-card">
+        <h3 class="locations-modal__sub-heading">New York</h3>
+        <h4 class="locations-modal__sale-place">Manhattan Mall</h4>
+        <span class="locations-modal__sale-address"
+          >100 W 33rd St, New York, NY 10001, US</span
+        >
+        <a
+          class="locations-modal__sale-address-link"
+          href="https://goo.gl/maps/FP3681EWaUSJPdXm6"
+          >how to find</a
+        >
+      </li>
+      <li class="locations-modal__address-card">
+        <h3 class="locations-modal__sub-heading">London</h3>
+        <h4 class="locations-modal__sale-place">Covent Garden</h4>
+        <span class="locations-modal__sale-address"
+          >14 James St, London WC2E 8BU, UK</span
+        >
+        <a
+          class="locations-modal__sale-address-link"
+          href="https://g.page/covent-garden-london?share"
+          >how to find</a
+        >
+      </li>
+      <li class="locations-modal__address-card">
+        <h3 class="locations-modal__sub-heading">Berlin</h3>
+        <h4 class="locations-modal__sale-place">Mercedes Platz</h4>
+        <span class="locations-modal__sale-address"
+          >Mühlenstraße 5, 10243 Berlin, Germany</span
+        >
+        <a
+          class="locations-modal__sale-address-link"
+          href="https://goo.gl/maps/5JnRTD1Htr5awVuFA"
+          target="_blank"
+          >how to find</a
+        >
+      </li>
+      <li class="locations-modal__address-card">
+        <h3 class="locations-modal__sub-heading">Paris</h3>
+        <h4 class="locations-modal__sale-place">Galerie Vivienne</h4>
+        <span class="locations-modal__sale-address"
+          >5 Rue de la Banque, 75002 Paris, France</span
+        >
+        <a
+          class="locations-modal__sale-address-link"
+          href="https://goo.gl/maps/GhdxaN1eFPjk9Q5ZA"
+          >how to find</a
+        >
+      </li>
+    </ul>
+  </div>
 </div>
 
 <!-- Contacts / Franchise Modal  -->
 
-<div class="modal-default-backdrop franchise-modal__is-hidden" data-franchise-modal>
-    <div class="franchise-modal modal-default-container">
-        <button data-franchise-modal-close class="modal-default-close-button">
-            <svg class="modal-default-close-icon">
-                <use href="./images/icons.svg#products-close-button"></use>
+<div
+  class="modal-default-backdrop franchise-modal__is-hidden"
+  data-franchise-modal
+>
+  <div class="franchise-modal modal-default-container">
+    <button
+      data-franchise-modal-close
+      class="modal-default-close-button"
+      aria-label="Close Button"
+    >
+      <svg class="modal-default-close-icon">
+        <use href="./images/icons.svg#products-close-button"></use>
+      </svg>
+    </button>
+    <h2 class="franchise-modal__heading">Eager to work with us?</h2>
+    <h3 class="franchise-modal__sub-heading">
+      Obtain access to our business knowledge, and trademark, just be becoming a
+      part of us just for:
+    </h3>
+    <ul class="franchise-modal__fee-list">
+      <li>initial start-up fee - USD 50.00</li>
+      <li>annual licensing fee - USD 15.00</li>
+    </ul>
+    <form class="franchise-modal__form">
+      <h4 class="franchise-modal__form-heading">Let's get in touch:</h4>
+      <ul class="franchise-modal__form-field-list">
+        <li class="franchise-modal__form-field">
+          <label for="franchise-modal__form-name">Name</label>
+          <div class="franchise-modal__field-container">
+            <svg class="franchise-modal__field-icon">
+              <use href="./images/icons.svg#form-name"></use>
             </svg>
-        </button>
-        <h2 class="franchise-modal__heading">Eager to work with us?</h2>
-        <h3 class="franchise-modal__sub-heading">Obtain
-            access to our
-            business
-            knowledge, and trademark, just be becoming a part of us just for:</h3>
-        <ul class="franchise-modal__fee-list">
-            <li>initial
-                start-up fee - USD 50.00</li>
-            <li>annual licensing fee - USD 15.00</li>
-        </ul>
-        <form class="franchise-modal__form">
-            <h4 class="franchise-modal__form-heading">Let's get in touch:</h4>
-            <ul class="franchise-modal__form-field-list">
-                <li class="franchise-modal__form-field">
-                    <label for="franchise-modal__form-name">Name</label>
-                    <div class="franchise-modal__field-container">
-                        <svg class="franchise-modal__field-icon">
-                            <use href="./images/icons.svg#form-name"></use>
-                        </svg>
-                        <input type="text" name="name" id="franchise-modal__form-name" />
-                    </div>
-                </li>
-                <li class="franchise-modal__form-field">
-                    <label for="franchise-modal__form-tel">Phone</label>
-                    <div class="franchise-modal__field-container">
-                        <svg class="franchise-modal__field-icon">
-                            <use href="./images/icons.svg#form-phone"></use>
-                        </svg>
-                        <input type="tel" name="tel" id="franchise-modal__form-tel" />
-                    </div>
-                </li>
-                <li class="franchise-modal__form-field">
-                    <label for="franchise-modal__form-mail">Email</label>
-                    <div class="franchise-modal__field-container">
-                        <svg class="franchise-modal__field-icon">
-                            <use href="./images/icons.svg#form-email"></use>
-                        </svg>
-                        <input type="email" name="mail" id="franchise-modal__form-mail" />
-                    </div>
-                </li>
-                <li class="franchise-modal__form-field">
-                    <label for="franchise-modal__textarea">Comment</label>
-                    <textarea name="comment" id="franchise-modal__textarea" cols="15" rows="2"
-                        placeholder="Leave your comment here"></textarea>
-                </li>
-            </ul>
-            <button type="submit" class="modal-default-submit-button">
-                Send
-                <svg width="15" height="20">
-                    <use href="./images/icons.svg#icon-arrow-common"></use>
-                </svg>
-            </button>
-        </form>
-    </div>
+            <input type="text" name="name" id="franchise-modal__form-name" />
+          </div>
+        </li>
+        <li class="franchise-modal__form-field">
+          <label for="franchise-modal__form-tel">Phone</label>
+          <div class="franchise-modal__field-container">
+            <svg class="franchise-modal__field-icon">
+              <use href="./images/icons.svg#form-phone"></use>
+            </svg>
+            <input type="tel" name="tel" id="franchise-modal__form-tel" />
+          </div>
+        </li>
+        <li class="franchise-modal__form-field">
+          <label for="franchise-modal__form-mail">Email</label>
+          <div class="franchise-modal__field-container">
+            <svg class="franchise-modal__field-icon">
+              <use href="./images/icons.svg#form-email"></use>
+            </svg>
+            <input type="email" name="mail" id="franchise-modal__form-mail" />
+          </div>
+        </li>
+        <li class="franchise-modal__form-field">
+          <label for="franchise-modal__textarea">Comment</label>
+          <textarea
+            name="comment"
+            id="franchise-modal__textarea"
+            cols="15"
+            rows="2"
+            placeholder="Leave your comment here"
+          ></textarea>
+        </li>
+      </ul>
+      <button
+        type="submit"
+        class="modal-default-submit-button"
+        aria-label="Submit button"
+      >
+        Send
+        <svg width="15" height="20">
+          <use href="./images/icons.svg#icon-arrow-common"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
 </div>

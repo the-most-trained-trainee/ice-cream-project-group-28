@@ -101,6 +101,13 @@
 
 // Header / Buy Now Modal
 
+.mob-menu-modal {
+  @media screen and (max-height: 575px) {
+    transform: translate(-50%, -25%);
+  }
+}
+
+
 .mob-menu-modal__heading {
   color: $secondary-title-color;
   margin-top: 5px;
@@ -224,6 +231,12 @@
 
 // Contacts / Locations Modal
 
+.locations-modal {
+  @media screen and (max-height: 575px) {
+    transform: translate(-50%, -25%);
+  }
+}
+
 .locations-modal__heading {
   margin-top: 10px;
   @include modal-font-set($font-weight: 700, $font-size: 18px, $line-height: 32px, $letter-spacing: 0.03em);
@@ -273,6 +286,12 @@
 }
 
 // Contacts / Franchise Modal
+
+.franchise-modal {
+  @media screen and (max-height: 575px) {
+    transform: translate(-50%, -25%);
+  }
+}
 
 .franchise-modal__heading {
   color: $primary-text-color;

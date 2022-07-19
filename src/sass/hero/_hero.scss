@@ -138,7 +138,7 @@
   margin-right: 8px;
 }
 
-.button--color__cherry {
+.hero__button--color-cherry {
   background-color: $accent-color;
   color: $primary-inverse-text-color;
   &:hover,
@@ -147,7 +147,7 @@
   }
 }
 
-.button--color__white {
+.hero__button--color-white {
   background-color: $primary-background-color;
   color: $accent-color;
 }
@@ -188,7 +188,7 @@
   }
 }
 
-.hero__text--wrap {
+.hero__text-wrap {
   margin-left: 152px;
   position: relative;
   @media screen and (min-width: $desktop) {
@@ -273,11 +273,8 @@
     transform-origin: top;
   }
 }
-.hero__text-button--color__cherry {
-  color: $accent-color;
-}
 
-.hero__text--wrap::before {
+.hero__text-wrap::before {
   display: none;
   @media screen and (min-width: $tablet) {
     display: block;
@@ -316,6 +313,7 @@
 }
 
 .hero__icon {
+  color: $accent-color;
   @media screen and (min-width: $tablet) {
     width: 13px;
     height: 7px;
@@ -326,7 +324,7 @@
   }
 }
 
-.count__wrap {
+.hero__count-wrap {
   position: relative;
   margin-right: 10px;
   display: none;
@@ -337,17 +335,17 @@
     margin-right: 25px;
   }
 }
-.count__ul {
+.hero__count-ul {
   text-align: right;
 }
-.count__list:not(:last-child) {
+.hero__count-list:not(:last-child) {
   margin-bottom: 17px;
   @media screen and (min-width: $desktop) {
     margin-bottom: 18px;
   }
 }
 
-.count__number {
+.hero__count-number {
   position: relative;
   font-family: 'Titan One', 'cursive';
 
@@ -363,7 +361,7 @@
 
   color: $accent-color;
 }
-.count__number::before {
+.hero__count-number::before {
   content: '';
   position: absolute;
   background-color: $primary-inverse-text-color;
@@ -378,7 +376,7 @@
 
   z-index: -2;
 }
-.count__text {
+.hero__count-text {
   font-weight: 400;
   font-size: 8px;
   line-height: 1.25;
@@ -390,7 +388,7 @@
   }
 }
 
-.count__wrap::after {
+.hero__count-wrap::after {
   content: '';
   position: absolute;
   width: 190px;
@@ -425,7 +423,7 @@
   z-index: -2;
 }
 
-.hover__text--wrap {
+.hero__hover-wrap {
   display: none;
 
   @media screen and (min-width: $tablet) {
@@ -442,11 +440,11 @@
     height: 241px;
     bottom: -19%;
   }
-  &:hover .hover__text {
+  &:hover .hero__hover-text {
     display: block;
   }
 }
-.hover__text {
+.hero__hover-text {
   display: none;
 
   font-family: 'Titan One', 'cursive';
@@ -472,6 +470,6 @@
     font-size: 26px;
   }
 }
-.hover__text--blue {
+.hero__hover-blue {
   color: #0104d8;
 }

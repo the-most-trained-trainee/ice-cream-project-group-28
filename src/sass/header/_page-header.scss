@@ -49,7 +49,7 @@
     transition: transform 1000ms;
 
     @media screen and (min-width: 768px) {
-        width: 38%;
+        width: 41%;
     }
 
     @media screen and (min-width: 1200px) {
@@ -86,6 +86,7 @@
 
 
 .header__menu-close-btn {
+    border-radius: 0;
     margin-right: 15px;
     margin-top: 25px;
     margin-left: auto;
@@ -252,6 +253,7 @@
 }
 
 .header__menu-btn-open {
+    border-radius: 0;
     text-align: center;
 
     margin-left: auto;
@@ -322,4 +324,3 @@
     fill: $accent-color;
     margin-left: 10px;
 }
-

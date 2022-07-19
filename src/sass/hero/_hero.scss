@@ -151,6 +151,28 @@
   background-color: $primary-background-color;
   color: $accent-color;
 }
+.hero__list:hover .hero__button {
+  transition: transform $default-transition-time $default-transition-function;
+  transform: rotateX(180deg);
+}
+.hero__list:hover .hero__button-text {
+  display: block;
+  transition: transform $default-transition-time $default-transition-function;
+
+  transform: rotateX(180deg);
+}
+.hero__list:not(:hover) .hero__button-text {
+  display: block;
+  transition: transform $default-transition-time $default-transition-function;
+
+  transform: rotateX(0);
+}
+.hero__list:not(:hover) .hero__button {
+  transition: transform $default-transition-time $default-transition-function;
+
+  transform: rotateX(0);
+}
+
 .hero__button {
   display: block;
   font-weight: 400;
@@ -209,6 +231,48 @@
     height: 26px;
   }
 }
+
+.hero__text-button:hover::after {
+  background-image: url(../images/hero-header/tablet/hero-milk-hover-1х.webp);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero-header/tablet/hero-milk-hover-2х.webp);
+    background-size: contain;
+  }
+  content: '';
+
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media screen and (min-width: $tablet) {
+    width: 160px;
+    height: 200px;
+    top: -70%;
+    right: 110%;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 260px;
+    height: 300px;
+    top: -70%;
+    right: 100%;
+  }
+
+  z-index: 0;
+  animation: kenburns-top 3s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
 .hero__text-button--color__cherry {
   color: $accent-color;
 }
@@ -249,6 +313,17 @@
   }
 
   z-index: 0;
+}
+
+.hero__icon {
+  @media screen and (min-width: $tablet) {
+    width: 13px;
+    height: 7px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 18px;
+    height: 12px;
+  }
 }
 
 .count__wrap {

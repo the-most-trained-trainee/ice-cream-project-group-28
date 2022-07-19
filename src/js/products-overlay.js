@@ -1,4 +1,4 @@
-const startButtons = document.querySelectorAll('[js-overlay-start]');
+const startButtons = document.querySelectorAll('[data-js-overlay-start]');
 const cards = document.querySelectorAll('.card__wrapper');
 
 cards.forEach(card => {    

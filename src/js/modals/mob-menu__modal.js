@@ -28,14 +28,7 @@
   }
 })();
 
-// Добавить data-header-model-open
-
-
-
-
-
-
-const productsCounterContainers = document.getElementsByClassName('stepper');
+const productsCounterContainers = document.getElementsByClassName('mob-menu-modal__stepper');
 
 for (const productsCounterContainer of productsCounterContainers) {
   const [plusButton] =

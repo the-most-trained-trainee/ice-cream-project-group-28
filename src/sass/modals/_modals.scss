@@ -1,5 +1,4 @@
 // Font Mixin
-// 222
 
 @mixin modal-font-set($font-family: 'DM Sans', $font-weight: 500, $font-size: 14px, $line-height: 18px, $text-align: center, $letter-spacing: 0.03em, $color: $secondary-text-color) {
   font-family: $font-family;
@@ -39,6 +38,9 @@
   padding-top: 8px;
   outline: none;
   background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .modal-default-close-icon {
@@ -63,7 +65,8 @@
   &.mob-menu-modal__is-hidden,
   &.about-modal__is-hidden,
   &.locations-modal__is-hidden,
-  &.franchise-modal__is-hidden {
+  &.franchise-modal__is-hidden, 
+  &.hero-modal__is-hidden {
     opacity: 0;
     pointer-events: none;
   }
@@ -171,6 +174,15 @@
   flex-direction: row;
 }
 
+// Hero Modal
+// .hero-modal__header-part {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   border-bottom: 1px dashed $secondary-title-color;
+//   padding: 10px;
+// }
+
 // About / Read More Modal
 
 .about-modal {
@@ -194,12 +206,12 @@
   }
 }
 
-.about-modal__readmore-heading {
-  font-style: italic;
-  color: $primary-background-color;
-  margin-top: 20px;
-  text-align: center;
+.about-modal__header-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px dashed $secondary-title-color;
+  padding: 10px;
 }
 
 // Contacts / Locations Modal
@@ -317,7 +329,7 @@
   }
 }
 
-.franchise-modal__textarea {
+#franchise-modal__textarea {
   display: block;
   width: 100%;
   resize: none;

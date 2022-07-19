@@ -1,4 +1,4 @@
-<section class="section hero">
+<section class="section hero" id="hero">
   <div class="container hero__container">
     <div>
       <h1 class="hero__title">
@@ -9,7 +9,7 @@
         <li class="hero__list">
           <a
             href="#products"
-            class="button link hero__button button--color__cherry button--with-accent-hover"
+            class="button link hero__button hero__button--color-cherry button--with-accent-hover"
           >
             <span class="hero__button-text">Products</span>
           </a>
@@ -17,13 +17,13 @@
         <li class="hero__list">
           <a
             href="#about"
-            class="button link hero__button button--color__white button--with-hover"
+            class="button link hero__button hero__button--color-white button--with-hover"
           >
             <span class="hero__button-text">How it’s made?</span>
           </a>
         </li>
       </ul>
-      <div class="hero__text--wrap">
+      <div class="hero__text-wrap">
         <p class="hero__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et
@@ -34,28 +34,32 @@
           class="button hero__text-button button--with-hover"
           data-modal-milkvideo
         >
-          <svg class="icon hero__icon hero__text-button--color__cherry">
+          <svg class="icon hero__icon">
             <use href="./images/icons.svg#icon-arrow-products"></use>
           </svg>
         </a>
       </div>
     </div>
-    <div class="count__wrap">
-      <ul class="count__ul">
-        <li class="count__list">
-          <p class="count__number" id="cafes-count" data-cafes-count="16">0</p>
-          <p class="count__text">cafes</p>
-        </li>
-        <li class="count__list">
-          <p class="count__number" id="trucks-count" data-truck-count="23">0</p>
-          <p class="count__text">food trucks</p>
-        </li>
-        <div class="hover__text--wrap">
-          <p class="hover__text">
-            glory to <span class="hover__text--blue">ukraine!</span>
+    <div class="hero__count-wrap">
+      <ul class="hero__count-ul">
+        <li class="hero__count-list">
+          <p class="hero__count-number" id="cafes-count" data-cafes-count="16">
+            0
           </p>
-        </div>
+          <p class="hero__count-text">cafes</p>
+        </li>
+        <li class="hero__count-list">
+          <p class="hero__count-number" id="trucks-count" data-truck-count="23">
+            0
+          </p>
+          <p class="hero__count-text">food trucks</p>
+        </li>
       </ul>
+      <div class="hero__hover-wrap">
+        <p class="hero__hover-text">
+          glory to <span class="hero__hover-yellow">ukraine!</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>

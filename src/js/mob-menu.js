@@ -9,18 +9,29 @@
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+   
     mobileMenu.classList.toggle('is-open');
+    document.body.classList.toggle('no-scroll');
+     
+  };
 
-     document.body.classList.toggle('no-scroll');
+    openMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+
+  //Chertok code
+  const closeMenuFromLink = () => {
+      
+    if (mobileMenu.classList.contains('is-open')) {
+      mobileMenu.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+    } 
 
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
-
-  //Chertok code
+  
   closeLinks.forEach(link => { 
-    link.addEventListener('click', toggleMenu);
+    link.addEventListener('click', closeMenuFromLink);
   });
   //Chertok code
 

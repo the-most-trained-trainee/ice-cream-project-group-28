@@ -20,7 +20,8 @@
 
     transition: background-color $default-transition-time $default-transition-function;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $accent-color;
     }
 

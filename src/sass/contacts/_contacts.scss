@@ -13,7 +13,6 @@
       to bottom,
       $primary-background-color 50%,
       $secondary-background-color 50%
-      
     );
   }
   & .container {
@@ -39,6 +38,12 @@
     background-color: #fff;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+
+    @media screen and (max-width: $mobile-max) {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
     @media screen and (min-width: 768px) {
       & {
         margin: 16px;
@@ -60,7 +65,7 @@
       justify-content: center;
     }
   }
-  &__btn-list>li:not(:last-child) {
+  &__btn-list > li:not(:last-child) {
     margin-bottom: 10px;
     @media screen and (min-width: $tablet) {
       & {
@@ -81,7 +86,9 @@
     color: $primary-inverse-text-color;
     background-color: $accent-color;
     transform: rotateX(0);
-    transition: background-color $default-transition-time $default-transition-function, transform $default-transition-time $default-transition-function;
+    transition: background-color $default-transition-time
+        $default-transition-function,
+      transform $default-transition-time $default-transition-function;
     @media screen and (min-width: $tablet) {
       width: auto;
       padding: 0 31px;
@@ -103,11 +110,13 @@
   &__btn:nth-child(2) .button {
     color: $accent-color;
     background-color: $primary-inverse-text-color;
-    transition: background-color $default-transition-time $default-transition-function, transform $default-transition-time $default-transition-function;
+    transition: background-color $default-transition-time
+        $default-transition-function,
+      transform $default-transition-time $default-transition-function;
     @media screen and (min-width: $tablet) {
-        width: auto;
-        padding: 0 39px;
-      }
+      width: auto;
+      padding: 0 39px;
+    }
   }
   &__btn:nth-child(2):hover .button,
   &__btn:nth-child(2):focus .button {
@@ -136,7 +145,7 @@
   &__type {
     display: flex;
     padding: 0 24px;
-    background-color: #F0D1A5;
+    background-color: #f0d1a5;
     height: 16px;
     width: max-content;
     border-radius: 4px;
@@ -151,17 +160,17 @@
       height: 28px;
     }
     &--color {
-      background-color: #C2E297;
+      background-color: #c2e297;
     }
   }
   &__content {
     margin-top: 24px;
     &:not(:last-child)::after {
       display: block;
-      content: "";
+      content: '';
       height: 1px;
       width: 100%;
-      background-color: #E1E1E1;
+      background-color: #e1e1e1;
     }
   }
 

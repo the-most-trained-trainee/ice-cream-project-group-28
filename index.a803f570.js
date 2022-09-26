@@ -1,0 +1,2 @@
+const e=document.querySelector("header"),r=document.querySelector("a[data-color]"),s=document.querySelectorAll(".header__nav-link");window.addEventListener("scroll",(function(){0!==window.scrollY?(e.classList.remove("header"),e.classList.add("header__scroll")):(s.forEach((e=>e.classList.remove("header__scroll-current"))),r.classList.add("header__scroll-current"),e.classList.add("header"),e.classList.remove("header__scroll"))}));
+//# sourceMappingURL=index.a803f570.js.map
